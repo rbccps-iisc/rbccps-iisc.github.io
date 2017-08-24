@@ -881,39 +881,38 @@ margin-bottom: 20px;
             -->
             <li class="nav-fixed nav-header active" data-group="_"><a href="#api-_">API Summary</a></li>
 
-                  <li class="nav-header" data-group="CatalogueGET"><a href="#api-CatalogueGET">API Methods - CatalogueGET</a></li>
-                    <li data-group="CatalogueGET" data-name="getCatData" class="">
-                      <a href="#api-CatalogueGET-getCatData">getCatData</a>
+                  <li class="nav-header" data-group="Catalogue"><a href="#api-Catalogue">API Methods - Catalogue</a></li>
+                    <li data-group="Catalogue" data-name="getCatalogueData" class="">
+                      <a href="#api-Catalogue-getCatalogueData">getCatalogueData</a>
                     </li>
-                  <li class="nav-header" data-group="CataloguePOST"><a href="#api-CataloguePOST">API Methods - CataloguePOST</a></li>
-                    <li data-group="CataloguePOST" data-name="postCatData" class="">
-                      <a href="#api-CataloguePOST-postCatData">postCatData</a>
+                    <li data-group="Catalogue" data-name="postCatalogueData" class="">
+                      <a href="#api-Catalogue-postCatalogueData">postCatalogueData</a>
                     </li>
                   <li class="nav-header" data-group="Publish"><a href="#api-Publish">API Methods - Publish</a></li>
-                    <li data-group="Publish" data-name="publishCommand" class="">
-                      <a href="#api-Publish-publishCommand">publishCommand</a>
+                    <li data-group="Publish" data-name="publishSensorData" class="">
+                      <a href="#api-Publish-publishSensorData">publishSensorData</a>
                     </li>
-                    <li data-group="Publish" data-name="publishLiveData" class="">
-                      <a href="#api-Publish-publishLiveData">publishLiveData</a>
+                    <li data-group="Publish" data-name="publishUpdate" class="">
+                      <a href="#api-Publish-publishUpdate">publishUpdate</a>
                     </li>
                   <li class="nav-header" data-group="Subscribe"><a href="#api-Subscribe">API Methods - Subscribe</a></li>
-                    <li data-group="Subscribe" data-name="bindForControlData" class="">
-                      <a href="#api-Subscribe-bindForControlData">bindForControlData</a>
+                    <li data-group="Subscribe" data-name="bindSensor" class="">
+                      <a href="#api-Subscribe-bindSensor">bindSensor</a>
                     </li>
-                    <li data-group="Subscribe" data-name="bindForLiveData" class="">
-                      <a href="#api-Subscribe-bindForLiveData">bindForLiveData</a>
+                    <li data-group="Subscribe" data-name="bindUpdate" class="">
+                      <a href="#api-Subscribe-bindUpdate">bindUpdate</a>
                     </li>
-                    <li data-group="Subscribe" data-name="subscribeCommandData" class="">
-                      <a href="#api-Subscribe-subscribeCommandData">subscribeCommandData</a>
+                    <li data-group="Subscribe" data-name="subscribeSensorData" class="">
+                      <a href="#api-Subscribe-subscribeSensorData">subscribeSensorData</a>
                     </li>
-                    <li data-group="Subscribe" data-name="subscribeLiveData" class="">
-                      <a href="#api-Subscribe-subscribeLiveData">subscribeLiveData</a>
+                    <li data-group="Subscribe" data-name="subscribeUpdate" class="">
+                      <a href="#api-Subscribe-subscribeUpdate">subscribeUpdate</a>
                     </li>
-                    <li data-group="Subscribe" data-name="unBindControlData" class="">
-                      <a href="#api-Subscribe-unBindControlData">unBindControlData</a>
+                    <li data-group="Subscribe" data-name="unBindSensor" class="">
+                      <a href="#api-Subscribe-unBindSensor">unBindSensor</a>
                     </li>
-                    <li data-group="Subscribe" data-name="unBindLiveData" class="">
-                      <a href="#api-Subscribe-unBindLiveData">unBindLiveData</a>
+                    <li data-group="Subscribe" data-name="unBindUpdate" class="">
+                      <a href="#api-Subscribe-unBindUpdate">unBindUpdate</a>
                     </li>
           </ul>
         </nav>
@@ -934,13 +933,13 @@ margin-bottom: 20px;
           </div>
         </div>
         <div id="sections">
-                <section id="api-CatalogueGET">
-                  <h1>CatalogueGET</h1>
-                    <div id="api-CatalogueGET-getCatData">
-                      <article id="api-CatalogueGET-getCatData-0" data-group="User" data-name="getCatData" data-version="0">
+                <section id="api-Catalogue">
+                  <h1>Catalogue</h1>
+                    <div id="api-Catalogue-getCatalogueData">
+                      <article id="api-Catalogue-getCatalogueData-0" data-group="User" data-name="getCatalogueData" data-version="0">
                         <div class="pull-left">
-                          <h1>getCatData</h1>
-                          <p>GET the Catalog Data from the Middleware</p>
+                          <h1>getCatalogueData</h1>
+                          <p>Used by Application to find the available sensors in the City</p>
                         </div>
                         <div class="pull-right"></div>
                         <div class="clearfix"></div>
@@ -953,73 +952,73 @@ margin-bottom: 20px;
                           <h3>Usage and SDK Samples</h3>
                         </p>
                         <ul class="nav nav-tabs nav-tabs-examples">
-                          <li class="active"><a href="#examples-CatalogueGET-getCatData-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-CatalogueGET-getCatData-0-java">Java</a></li>
-                          <li class=""><a href="#examples-CatalogueGET-getCatData-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-CatalogueGET-getCatData-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-CatalogueGET-getCatData-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-CatalogueGET-getCatData-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-CatalogueGET-getCatData-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-CatalogueGET-getCatData-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-CatalogueGET-getCatData-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-CatalogueGET-getCatData-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-CatalogueGET-getCatData-0-python">Python</a></li>
+                          <li class="active"><a href="#examples-Catalogue-getCatalogueData-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-Catalogue-getCatalogueData-0-java">Java</a></li>
+                          <li class=""><a href="#examples-Catalogue-getCatalogueData-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-Catalogue-getCatalogueData-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-Catalogue-getCatalogueData-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-Catalogue-getCatalogueData-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-Catalogue-getCatalogueData-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Catalogue-getCatalogueData-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-Catalogue-getCatalogueData-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-Catalogue-getCatalogueData-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Catalogue-getCatalogueData-0-python">Python</a></li>
                         </ul>
 
                         <div class="tab-content">
-                          <div class="tab-pane active" id="examples-CatalogueGET-getCatData-0-curl">
+                          <div class="tab-pane active" id="examples-Catalogue-getCatalogueData-0-curl">
                             <pre class="prettyprint"><code class="language-bsh">curl -X GET "https://smartcity.rbccps.org/api/0.1.0/cat/"</code></pre>
                           </div>
-                          <div class="tab-pane" id="examples-CatalogueGET-getCatData-0-java">
+                          <div class="tab-pane" id="examples-Catalogue-getCatalogueData-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
 import io.swagger.client.auth.*;
 import io.swagger.client.model.*;
-import io.swagger.client.api.CatalogueGETApi;
+import io.swagger.client.api.CatalogueApi;
 
 import java.io.File;
 import java.util.*;
 
-public class CatalogueGETApiExample {
+public class CatalogueApiExample {
 
     public static void main(String[] args) {
         
-        CatalogueGETApi apiInstance = new CatalogueGETApi();
+        CatalogueApi apiInstance = new CatalogueApi();
         try {
-            apiInstance.getCatData();
+            apiInstance.getCatalogueData();
         } catch (ApiException e) {
-            System.err.println("Exception when calling CatalogueGETApi#getCatData");
+            System.err.println("Exception when calling CatalogueApi#getCatalogueData");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
 
-                          <div class="tab-pane" id="examples-CatalogueGET-getCatData-0-android">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.CatalogueGETApi;
+                          <div class="tab-pane" id="examples-Catalogue-getCatalogueData-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.CatalogueApi;
 
-public class CatalogueGETApiExample {
+public class CatalogueApiExample {
 
     public static void main(String[] args) {
-        CatalogueGETApi apiInstance = new CatalogueGETApi();
+        CatalogueApi apiInstance = new CatalogueApi();
         try {
-            apiInstance.getCatData();
+            apiInstance.getCatalogueData();
         } catch (ApiException e) {
-            System.err.println("Exception when calling CatalogueGETApi#getCatData");
+            System.err.println("Exception when calling CatalogueApi#getCatalogueData");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
   <!--
-  <div class="tab-pane" id="examples-CatalogueGET-getCatData-0-groovy">
+  <div class="tab-pane" id="examples-Catalogue-getCatalogueData-0-groovy">
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
-                            <div class="tab-pane" id="examples-CatalogueGET-getCatData-0-objc">
+                            <div class="tab-pane" id="examples-Catalogue-getCatalogueData-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">
-CatalogueGETApi *apiInstance = [[CatalogueGETApi alloc] init];
+CatalogueApi *apiInstance = [[CatalogueApi alloc] init];
 
-// GET the Catalog Data from the Middleware
-[apiInstance getCatDataWithCompletionHandler: 
+// Used by Application to find the available sensors in the City
+[apiInstance getCatalogueDataWithCompletionHandler: 
               ^(NSError* error) {
                             if (error) {
                                 NSLog(@"Error: %@", error);
@@ -1028,10 +1027,10 @@ CatalogueGETApi *apiInstance = [[CatalogueGETApi alloc] init];
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-CatalogueGET-getCatData-0-javascript">
+                            <div class="tab-pane" id="examples-Catalogue-getCatalogueData-0-javascript">
                               <pre class="prettyprint"><code class="language-js">var SmartCityTestbed = require('smart_city_testbed');
 
-var api = new SmartCityTestbed.CatalogueGETApi()
+var api = new SmartCityTestbed.CatalogueApi()
 
 var callback = function(error, data, response) {
   if (error) {
@@ -1040,14 +1039,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-api.getCatData(callback);
+api.getCatalogueData(callback);
 </code></pre>
                             </div>
 
-                            <!--<div class="tab-pane" id="examples-CatalogueGET-getCatData-0-angular">
+                            <!--<div class="tab-pane" id="examples-Catalogue-getCatalogueData-0-angular">
               <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
             </div>-->
-                            <div class="tab-pane" id="examples-CatalogueGET-getCatData-0-csharp">
+                            <div class="tab-pane" id="examples-Catalogue-getCatalogueData-0-csharp">
                               <pre class="prettyprint"><code class="language-cs">using System;
 using System.Diagnostics;
 using IO.Swagger.Api;
@@ -1056,21 +1055,21 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class getCatDataExample
+    public class getCatalogueDataExample
     {
         public void main()
         {
             
-            var apiInstance = new CatalogueGETApi();
+            var apiInstance = new CatalogueApi();
 
             try
             {
-                // GET the Catalog Data from the Middleware
-                apiInstance.getCatData();
+                // Used by Application to find the available sensors in the City
+                apiInstance.getCatalogueData();
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling CatalogueGETApi.getCatData: " + e.Message );
+                Debug.Print("Exception when calling CatalogueApi.getCatalogueData: " + e.Message );
             }
         }
     }
@@ -1078,36 +1077,36 @@ namespace Example
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-CatalogueGET-getCatData-0-php">
+                            <div class="tab-pane" id="examples-Catalogue-getCatalogueData-0-php">
                               <pre class="prettyprint"><code class="language-php"><&#63;php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$api_instance = new Swagger\Client\Api\CatalogueGETApi();
+$api_instance = new Swagger\Client\Api\CatalogueApi();
 
 try {
-    $api_instance->getCatData();
+    $api_instance->getCatalogueData();
 } catch (Exception $e) {
-    echo 'Exception when calling CatalogueGETApi->getCatData: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CatalogueApi->getCatalogueData: ', $e->getMessage(), PHP_EOL;
 }
 ?></code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-CatalogueGET-getCatData-0-perl">
+                            <div class="tab-pane" id="examples-Catalogue-getCatalogueData-0-perl">
                               <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
 use WWW::SwaggerClient::Configuration;
-use WWW::SwaggerClient::CatalogueGETApi;
+use WWW::SwaggerClient::CatalogueApi;
 
-my $api_instance = WWW::SwaggerClient::CatalogueGETApi->new();
+my $api_instance = WWW::SwaggerClient::CatalogueApi->new();
 
 eval { 
-    $api_instance->getCatData();
+    $api_instance->getCatalogueData();
 };
 if ($@) {
-    warn "Exception when calling CatalogueGETApi->getCatData: $@\n";
+    warn "Exception when calling CatalogueApi->getCatalogueData: $@\n";
 }</code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-CatalogueGET-getCatData-0-python">
+                            <div class="tab-pane" id="examples-Catalogue-getCatalogueData-0-python">
                               <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
 import time
 import swagger_client
@@ -1115,13 +1114,13 @@ from swagger_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.CatalogueGETApi()
+api_instance = swagger_client.CatalogueApi()
 
 try: 
-    # GET the Catalog Data from the Middleware
-    api_instance.get_cat_data()
+    # Used by Application to find the available sensors in the City
+    api_instance.get_catalogue_data()
 except ApiException as e:
-    print("Exception when calling CatalogueGETApi->getCatData: %s\n" % e)</code></pre>
+    print("Exception when calling CatalogueApi->getCatalogueData: %s\n" % e)</code></pre>
                             </div>
                           </div>
 
@@ -1152,14 +1151,11 @@ except ApiException as e:
                         </article>
                       </div>
                       <hr>
-                  </section>
-                <section id="api-CataloguePOST">
-                  <h1>CataloguePOST</h1>
-                    <div id="api-CataloguePOST-postCatData">
-                      <article id="api-CataloguePOST-postCatData-0" data-group="User" data-name="postCatData" data-version="0">
+                    <div id="api-Catalogue-postCatalogueData">
+                      <article id="api-Catalogue-postCatalogueData-0" data-group="User" data-name="postCatalogueData" data-version="0">
                         <div class="pull-left">
-                          <h1>postCatData</h1>
-                          <p>POST new Catalog Data to the Middleware</p>
+                          <h1>postCatalogueData</h1>
+                          <p>Used by Sensor / Data Provider to create a new Catalog Data (Sensor Information) to the Middleware</p>
                         </div>
                         <div class="pull-right"></div>
                         <div class="clearfix"></div>
@@ -1172,33 +1168,33 @@ except ApiException as e:
                           <h3>Usage and SDK Samples</h3>
                         </p>
                         <ul class="nav nav-tabs nav-tabs-examples">
-                          <li class="active"><a href="#examples-CataloguePOST-postCatData-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-CataloguePOST-postCatData-0-java">Java</a></li>
-                          <li class=""><a href="#examples-CataloguePOST-postCatData-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-CataloguePOST-postCatData-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-CataloguePOST-postCatData-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-CataloguePOST-postCatData-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-CataloguePOST-postCatData-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-CataloguePOST-postCatData-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-CataloguePOST-postCatData-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-CataloguePOST-postCatData-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-CataloguePOST-postCatData-0-python">Python</a></li>
+                          <li class="active"><a href="#examples-Catalogue-postCatalogueData-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-Catalogue-postCatalogueData-0-java">Java</a></li>
+                          <li class=""><a href="#examples-Catalogue-postCatalogueData-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-Catalogue-postCatalogueData-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-Catalogue-postCatalogueData-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-Catalogue-postCatalogueData-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-Catalogue-postCatalogueData-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Catalogue-postCatalogueData-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-Catalogue-postCatalogueData-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-Catalogue-postCatalogueData-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Catalogue-postCatalogueData-0-python">Python</a></li>
                         </ul>
 
                         <div class="tab-content">
-                          <div class="tab-pane active" id="examples-CataloguePOST-postCatData-0-curl">
+                          <div class="tab-pane active" id="examples-Catalogue-postCatalogueData-0-curl">
                             <pre class="prettyprint"><code class="language-bsh">curl -X POST -H "apikey: [[apiKey]]" "https://smartcity.rbccps.org/api/0.1.0/cat/"</code></pre>
                           </div>
-                          <div class="tab-pane" id="examples-CataloguePOST-postCatData-0-java">
+                          <div class="tab-pane" id="examples-Catalogue-postCatalogueData-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
 import io.swagger.client.auth.*;
 import io.swagger.client.model.*;
-import io.swagger.client.api.CataloguePOSTApi;
+import io.swagger.client.api.CatalogueApi;
 
 import java.io.File;
 import java.util.*;
 
-public class CataloguePOSTApiExample {
+public class CatalogueApiExample {
 
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
@@ -1209,40 +1205,40 @@ public class CataloguePOSTApiExample {
         // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
         //api_key.setApiKeyPrefix("Token");
 
-        CataloguePOSTApi apiInstance = new CataloguePOSTApi();
+        CatalogueApi apiInstance = new CatalogueApi();
         Body_6 body = ; // Body_6 | Sensor Data object that needs to be added
         try {
-            apiInstance.postCatData(body);
+            apiInstance.postCatalogueData(body);
         } catch (ApiException e) {
-            System.err.println("Exception when calling CataloguePOSTApi#postCatData");
+            System.err.println("Exception when calling CatalogueApi#postCatalogueData");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
 
-                          <div class="tab-pane" id="examples-CataloguePOST-postCatData-0-android">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.CataloguePOSTApi;
+                          <div class="tab-pane" id="examples-Catalogue-postCatalogueData-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.CatalogueApi;
 
-public class CataloguePOSTApiExample {
+public class CatalogueApiExample {
 
     public static void main(String[] args) {
-        CataloguePOSTApi apiInstance = new CataloguePOSTApi();
+        CatalogueApi apiInstance = new CatalogueApi();
         Body_6 body = ; // Body_6 | Sensor Data object that needs to be added
         try {
-            apiInstance.postCatData(body);
+            apiInstance.postCatalogueData(body);
         } catch (ApiException e) {
-            System.err.println("Exception when calling CataloguePOSTApi#postCatData");
+            System.err.println("Exception when calling CatalogueApi#postCatalogueData");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
   <!--
-  <div class="tab-pane" id="examples-CataloguePOST-postCatData-0-groovy">
+  <div class="tab-pane" id="examples-Catalogue-postCatalogueData-0-groovy">
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
-                            <div class="tab-pane" id="examples-CataloguePOST-postCatData-0-objc">
+                            <div class="tab-pane" id="examples-Catalogue-postCatalogueData-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">Configuration *apiConfig = [Configuration sharedConfig];
 
 // Configure API key authorization: (authentication scheme: api_key)
@@ -1252,10 +1248,10 @@ public class CataloguePOSTApiExample {
 
 Body_6 *body = ; // Sensor Data object that needs to be added
 
-CataloguePOSTApi *apiInstance = [[CataloguePOSTApi alloc] init];
+CatalogueApi *apiInstance = [[CatalogueApi alloc] init];
 
-// POST new Catalog Data to the Middleware
-[apiInstance postCatDataWith:body
+// Used by Sensor / Data Provider to create a new Catalog Data (Sensor Information) to the Middleware
+[apiInstance postCatalogueDataWith:body
               completionHandler: ^(NSError* error) {
                             if (error) {
                                 NSLog(@"Error: %@", error);
@@ -1264,7 +1260,7 @@ CataloguePOSTApi *apiInstance = [[CataloguePOSTApi alloc] init];
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-CataloguePOST-postCatData-0-javascript">
+                            <div class="tab-pane" id="examples-Catalogue-postCatalogueData-0-javascript">
                               <pre class="prettyprint"><code class="language-js">var SmartCityTestbed = require('smart_city_testbed');
 var defaultClient = SmartCityTestbed.ApiClient.instance;
 
@@ -1274,7 +1270,7 @@ api_key.apiKey = "YOUR API KEY"
 // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
 //api_key.apiKeyPrefix['apikey'] = "Token"
 
-var api = new SmartCityTestbed.CataloguePOSTApi()
+var api = new SmartCityTestbed.CatalogueApi()
 
 var body = ; // {Body_6} Sensor Data object that needs to be added
 
@@ -1286,14 +1282,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-api.postCatData(body, callback);
+api.postCatalogueData(body, callback);
 </code></pre>
                             </div>
 
-                            <!--<div class="tab-pane" id="examples-CataloguePOST-postCatData-0-angular">
+                            <!--<div class="tab-pane" id="examples-Catalogue-postCatalogueData-0-angular">
               <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
             </div>-->
-                            <div class="tab-pane" id="examples-CataloguePOST-postCatData-0-csharp">
+                            <div class="tab-pane" id="examples-Catalogue-postCatalogueData-0-csharp">
                               <pre class="prettyprint"><code class="language-cs">using System;
 using System.Diagnostics;
 using IO.Swagger.Api;
@@ -1302,7 +1298,7 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class postCatDataExample
+    public class postCatalogueDataExample
     {
         public void main()
         {
@@ -1312,17 +1308,17 @@ namespace Example
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // Configuration.Default.ApiKeyPrefix.Add("apikey", "Bearer");
 
-            var apiInstance = new CataloguePOSTApi();
+            var apiInstance = new CatalogueApi();
             var body = new Body_6(); // Body_6 | Sensor Data object that needs to be added
 
             try
             {
-                // POST new Catalog Data to the Middleware
-                apiInstance.postCatData(body);
+                // Used by Sensor / Data Provider to create a new Catalog Data (Sensor Information) to the Middleware
+                apiInstance.postCatalogueData(body);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling CataloguePOSTApi.postCatData: " + e.Message );
+                Debug.Print("Exception when calling CatalogueApi.postCatalogueData: " + e.Message );
             }
         }
     }
@@ -1330,7 +1326,7 @@ namespace Example
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-CataloguePOST-postCatData-0-php">
+                            <div class="tab-pane" id="examples-Catalogue-postCatalogueData-0-php">
                               <pre class="prettyprint"><code class="language-php"><&#63;php
 require_once(__DIR__ . '/vendor/autoload.php');
 
@@ -1339,39 +1335,39 @@ Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('apikey', 'YO
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\CataloguePOSTApi();
+$api_instance = new Swagger\Client\Api\CatalogueApi();
 $body = ; // Body_6 | Sensor Data object that needs to be added
 
 try {
-    $api_instance->postCatData($body);
+    $api_instance->postCatalogueData($body);
 } catch (Exception $e) {
-    echo 'Exception when calling CataloguePOSTApi->postCatData: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CatalogueApi->postCatalogueData: ', $e->getMessage(), PHP_EOL;
 }
 ?></code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-CataloguePOST-postCatData-0-perl">
+                            <div class="tab-pane" id="examples-Catalogue-postCatalogueData-0-perl">
                               <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
 use WWW::SwaggerClient::Configuration;
-use WWW::SwaggerClient::CataloguePOSTApi;
+use WWW::SwaggerClient::CatalogueApi;
 
 # Configure API key authorization: api_key
 $WWW::SwaggerClient::Configuration::api_key->{'apikey'} = 'YOUR_API_KEY';
 # uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 #$WWW::SwaggerClient::Configuration::api_key_prefix->{'apikey'} = "Bearer";
 
-my $api_instance = WWW::SwaggerClient::CataloguePOSTApi->new();
+my $api_instance = WWW::SwaggerClient::CatalogueApi->new();
 my $body = WWW::SwaggerClient::Object::Body_6->new(); # Body_6 | Sensor Data object that needs to be added
 
 eval { 
-    $api_instance->postCatData(body => $body);
+    $api_instance->postCatalogueData(body => $body);
 };
 if ($@) {
-    warn "Exception when calling CataloguePOSTApi->postCatData: $@\n";
+    warn "Exception when calling CatalogueApi->postCatalogueData: $@\n";
 }</code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-CataloguePOST-postCatData-0-python">
+                            <div class="tab-pane" id="examples-Catalogue-postCatalogueData-0-python">
                               <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
 import time
 import swagger_client
@@ -1384,14 +1380,14 @@ swagger_client.configuration.api_key['apikey'] = 'YOUR_API_KEY'
 # swagger_client.configuration.api_key_prefix['apikey'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = swagger_client.CataloguePOSTApi()
+api_instance = swagger_client.CatalogueApi()
 body =  # Body_6 | Sensor Data object that needs to be added
 
 try: 
-    # POST new Catalog Data to the Middleware
-    api_instance.post_cat_data(body)
+    # Used by Sensor / Data Provider to create a new Catalog Data (Sensor Information) to the Middleware
+    api_instance.post_catalogue_data(body)
 except ApiException as e:
-    print("Exception when calling CataloguePOSTApi->postCatData: %s\n" % e)</code></pre>
+    print("Exception when calling CatalogueApi->postCatalogueData: %s\n" % e)</code></pre>
                             </div>
                           </div>
 
@@ -1431,12 +1427,12 @@ $(document).ready(function() {
   }
 
   var view = new JSONSchemaView(schema,2,{isBodyParam: true});
-  var result = $('#d2e199_postCatData_body');
+  var result = $('#d2e199_postCatalogueData_body');
   result.empty();
   result.append(view.render());
 });
 </script>
-<div id="d2e199_postCatData_body"></div>
+<div id="d2e199_postCatalogueData_body"></div>
 </td>
 </tr>
 
@@ -1467,11 +1463,11 @@ $(document).ready(function() {
                   </section>
                 <section id="api-Publish">
                   <h1>Publish</h1>
-                    <div id="api-Publish-publishCommand">
-                      <article id="api-Publish-publishCommand-0" data-group="User" data-name="publishCommand" data-version="0">
+                    <div id="api-Publish-publishSensorData">
+                      <article id="api-Publish-publishSensorData-0" data-group="User" data-name="publishSensorData" data-version="0">
                         <div class="pull-left">
-                          <h1>publishCommand</h1>
-                          <p>Publish new command to the middleware</p>
+                          <h1>publishSensorData</h1>
+                          <p>Used by Devices to Publish new sensor information to the middleware</p>
                         </div>
                         <div class="pull-right"></div>
                         <div class="clearfix"></div>
@@ -1479,338 +1475,29 @@ $(document).ready(function() {
                         <p class="marked">To publish data to the middleware, use the API with the following parameters in the body.</p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/update/</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/publish/data</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
                         <ul class="nav nav-tabs nav-tabs-examples">
-                          <li class="active"><a href="#examples-Publish-publishCommand-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-Publish-publishCommand-0-java">Java</a></li>
-                          <li class=""><a href="#examples-Publish-publishCommand-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-Publish-publishCommand-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-Publish-publishCommand-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-Publish-publishCommand-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Publish-publishCommand-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-Publish-publishCommand-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-Publish-publishCommand-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-Publish-publishCommand-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-Publish-publishCommand-0-python">Python</a></li>
+                          <li class="active"><a href="#examples-Publish-publishSensorData-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-Publish-publishSensorData-0-java">Java</a></li>
+                          <li class=""><a href="#examples-Publish-publishSensorData-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-Publish-publishSensorData-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-Publish-publishSensorData-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-Publish-publishSensorData-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-Publish-publishSensorData-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Publish-publishSensorData-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-Publish-publishSensorData-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-Publish-publishSensorData-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Publish-publishSensorData-0-python">Python</a></li>
                         </ul>
 
                         <div class="tab-content">
-                          <div class="tab-pane active" id="examples-Publish-publishCommand-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST -H "apikey: [[apiKey]]" "https://smartcity.rbccps.org/api/0.1.0/update/"</code></pre>
+                          <div class="tab-pane active" id="examples-Publish-publishSensorData-0-curl">
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST -H "apikey: [[apiKey]]" "https://smartcity.rbccps.org/api/0.1.0/publish/data"</code></pre>
                           </div>
-                          <div class="tab-pane" id="examples-Publish-publishCommand-0-java">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
-import io.swagger.client.auth.*;
-import io.swagger.client.model.*;
-import io.swagger.client.api.PublishApi;
-
-import java.io.File;
-import java.util.*;
-
-public class PublishApiExample {
-
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        
-        // Configure API key authorization: api_key
-        ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
-        api_key.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //api_key.setApiKeyPrefix("Token");
-
-        PublishApi apiInstance = new PublishApi();
-        Body_1 body = ; // Body_1 | Command Data object that needs to be added
-        try {
-            apiInstance.publishCommand(body);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling PublishApi#publishCommand");
-            e.printStackTrace();
-        }
-    }
-}</code></pre>
-                          </div>
-
-                          <div class="tab-pane" id="examples-Publish-publishCommand-0-android">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.PublishApi;
-
-public class PublishApiExample {
-
-    public static void main(String[] args) {
-        PublishApi apiInstance = new PublishApi();
-        Body_1 body = ; // Body_1 | Command Data object that needs to be added
-        try {
-            apiInstance.publishCommand(body);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling PublishApi#publishCommand");
-            e.printStackTrace();
-        }
-    }
-}</code></pre>
-                          </div>
-  <!--
-  <div class="tab-pane" id="examples-Publish-publishCommand-0-groovy">
-  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
-  </div> -->
-                            <div class="tab-pane" id="examples-Publish-publishCommand-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">Configuration *apiConfig = [Configuration sharedConfig];
-
-// Configure API key authorization: (authentication scheme: api_key)
-[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"apikey"];
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"apikey"];
-
-Body_1 *body = ; // Command Data object that needs to be added
-
-PublishApi *apiInstance = [[PublishApi alloc] init];
-
-// Publish new command to the middleware
-[apiInstance publishCommandWith:body
-              completionHandler: ^(NSError* error) {
-                            if (error) {
-                                NSLog(@"Error: %@", error);
-                            }
-                        }];
-</code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-Publish-publishCommand-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var SmartCityTestbed = require('smart_city_testbed');
-var defaultClient = SmartCityTestbed.ApiClient.instance;
-
-// Configure API key authorization: api_key
-var api_key = defaultClient.authentications['api_key'];
-api_key.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api_key.apiKeyPrefix['apikey'] = "Token"
-
-var api = new SmartCityTestbed.PublishApi()
-
-var body = ; // {Body_1} Command Data object that needs to be added
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-api.publishCommand(body, callback);
-</code></pre>
-                            </div>
-
-                            <!--<div class="tab-pane" id="examples-Publish-publishCommand-0-angular">
-              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
-            </div>-->
-                            <div class="tab-pane" id="examples-Publish-publishCommand-0-csharp">
-                              <pre class="prettyprint"><code class="language-cs">using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class publishCommandExample
-    {
-        public void main()
-        {
-            
-            // Configure API key authorization: api_key
-            Configuration.Default.ApiKey.Add("apikey", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.ApiKeyPrefix.Add("apikey", "Bearer");
-
-            var apiInstance = new PublishApi();
-            var body = new Body_1(); // Body_1 | Command Data object that needs to be added
-
-            try
-            {
-                // Publish new command to the middleware
-                apiInstance.publishCommand(body);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling PublishApi.publishCommand: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-Publish-publishCommand-0-php">
-                              <pre class="prettyprint"><code class="language-php"><&#63;php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: api_key
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('apikey', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('apikey', 'Bearer');
-
-$api_instance = new Swagger\Client\Api\PublishApi();
-$body = ; // Body_1 | Command Data object that needs to be added
-
-try {
-    $api_instance->publishCommand($body);
-} catch (Exception $e) {
-    echo 'Exception when calling PublishApi->publishCommand: ', $e->getMessage(), PHP_EOL;
-}
-?></code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-Publish-publishCommand-0-perl">
-                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
-use WWW::SwaggerClient::Configuration;
-use WWW::SwaggerClient::PublishApi;
-
-# Configure API key authorization: api_key
-$WWW::SwaggerClient::Configuration::api_key->{'apikey'} = 'YOUR_API_KEY';
-# uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-#$WWW::SwaggerClient::Configuration::api_key_prefix->{'apikey'} = "Bearer";
-
-my $api_instance = WWW::SwaggerClient::PublishApi->new();
-my $body = WWW::SwaggerClient::Object::Body_1->new(); # Body_1 | Command Data object that needs to be added
-
-eval { 
-    $api_instance->publishCommand(body => $body);
-};
-if ($@) {
-    warn "Exception when calling PublishApi->publishCommand: $@\n";
-}</code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-Publish-publishCommand-0-python">
-                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
-import time
-import swagger_client
-from swagger_client.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: api_key
-swagger_client.configuration.api_key['apikey'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['apikey'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = swagger_client.PublishApi()
-body =  # Body_1 | Command Data object that needs to be added
-
-try: 
-    # Publish new command to the middleware
-    api_instance.publish_command(body)
-except ApiException as e:
-    print("Exception when calling PublishApi->publishCommand: %s\n" % e)</code></pre>
-                            </div>
-                          </div>
-
-                          <h2>Parameters</h2>
-
-
-
-                            <div class="methodsubtabletitle">Body parameters</div>
-                            <table id="methodsubtable">
-                              <tr>
-                                <th width="150px">Name</th>
-                                <th>Description</th>
-                              </tr>
-                                <tr><td style="width:150px;">body <span style="color:red;">*</span></td>
-<td>
-
-
-<script>
-$(document).ready(function() {
-  var schemaWrapper = {
-  "in" : "body",
-  "name" : "body",
-  "description" : "Command Data object that needs to be added",
-  "required" : true,
-  "schema" : {
-    "$ref" : "#/definitions/body_1"
-  }
-};
-  var schema = schemaWrapper.schema;
-  if (schema.$ref != null) {
-    schema = defsParser.$refs.get(schema.$ref);
-  } else {
-    schemaWrapper.definitions = Object.assign({}, defs);
-    $RefParser.dereference(schemaWrapper).catch(function(err) {
-      console.log(err);
-    });
-  }
-
-  var view = new JSONSchemaView(schema,2,{isBodyParam: true});
-  var result = $('#d2e199_publishCommand_body');
-  result.empty();
-  result.append(view.render());
-});
-</script>
-<div id="d2e199_publishCommand_body"></div>
-</td>
-</tr>
-
-                            </table>
-
-
-
-                          <h2>Responses</h2>
-                            <h3> Status: 200 - Data received by the Broker </h3>
-
-                            <ul class="nav nav-tabs nav-tabs-examples" >
-                            </ul>
-
-                            <div class="tab-content" style='margin-bottom: 10px;'>
-                            </div>
-
-                            <h3> Status: 405 - Invalid input </h3>
-
-                            <ul class="nav nav-tabs nav-tabs-examples" >
-                            </ul>
-
-                            <div class="tab-content" style='margin-bottom: 10px;'>
-                            </div>
-
-                        </article>
-                      </div>
-                      <hr>
-                    <div id="api-Publish-publishLiveData">
-                      <article id="api-Publish-publishLiveData-0" data-group="User" data-name="publishLiveData" data-version="0">
-                        <div class="pull-left">
-                          <h1>publishLiveData</h1>
-                          <p>Publish new sensor information to the middleware</p>
-                        </div>
-                        <div class="pull-right"></div>
-                        <div class="clearfix"></div>
-                        <p></p>
-                        <p class="marked">To publish data to the middleware, use the API with the following parameters in the body.</p>
-                        <p></p>
-                        <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/live/</span></code></pre>
-                        <p>
-                          <h3>Usage and SDK Samples</h3>
-                        </p>
-                        <ul class="nav nav-tabs nav-tabs-examples">
-                          <li class="active"><a href="#examples-Publish-publishLiveData-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-Publish-publishLiveData-0-java">Java</a></li>
-                          <li class=""><a href="#examples-Publish-publishLiveData-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-Publish-publishLiveData-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-Publish-publishLiveData-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-Publish-publishLiveData-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Publish-publishLiveData-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-Publish-publishLiveData-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-Publish-publishLiveData-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-Publish-publishLiveData-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-Publish-publishLiveData-0-python">Python</a></li>
-                        </ul>
-
-                        <div class="tab-content">
-                          <div class="tab-pane active" id="examples-Publish-publishLiveData-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST -H "apikey: [[apiKey]]" "https://smartcity.rbccps.org/api/0.1.0/live/"</code></pre>
-                          </div>
-                          <div class="tab-pane" id="examples-Publish-publishLiveData-0-java">
+                          <div class="tab-pane" id="examples-Publish-publishSensorData-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
 import io.swagger.client.auth.*;
 import io.swagger.client.model.*;
@@ -1833,16 +1520,16 @@ public class PublishApiExample {
         PublishApi apiInstance = new PublishApi();
         Body body = ; // Body | Sensor Data object that needs to be added
         try {
-            apiInstance.publishLiveData(body);
+            apiInstance.publishSensorData(body);
         } catch (ApiException e) {
-            System.err.println("Exception when calling PublishApi#publishLiveData");
+            System.err.println("Exception when calling PublishApi#publishSensorData");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
 
-                          <div class="tab-pane" id="examples-Publish-publishLiveData-0-android">
+                          <div class="tab-pane" id="examples-Publish-publishSensorData-0-android">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.PublishApi;
 
 public class PublishApiExample {
@@ -1851,19 +1538,19 @@ public class PublishApiExample {
         PublishApi apiInstance = new PublishApi();
         Body body = ; // Body | Sensor Data object that needs to be added
         try {
-            apiInstance.publishLiveData(body);
+            apiInstance.publishSensorData(body);
         } catch (ApiException e) {
-            System.err.println("Exception when calling PublishApi#publishLiveData");
+            System.err.println("Exception when calling PublishApi#publishSensorData");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
   <!--
-  <div class="tab-pane" id="examples-Publish-publishLiveData-0-groovy">
+  <div class="tab-pane" id="examples-Publish-publishSensorData-0-groovy">
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
-                            <div class="tab-pane" id="examples-Publish-publishLiveData-0-objc">
+                            <div class="tab-pane" id="examples-Publish-publishSensorData-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">Configuration *apiConfig = [Configuration sharedConfig];
 
 // Configure API key authorization: (authentication scheme: api_key)
@@ -1875,8 +1562,8 @@ Body *body = ; // Sensor Data object that needs to be added
 
 PublishApi *apiInstance = [[PublishApi alloc] init];
 
-// Publish new sensor information to the middleware
-[apiInstance publishLiveDataWith:body
+// Used by Devices to Publish new sensor information to the middleware
+[apiInstance publishSensorDataWith:body
               completionHandler: ^(NSError* error) {
                             if (error) {
                                 NSLog(@"Error: %@", error);
@@ -1885,7 +1572,7 @@ PublishApi *apiInstance = [[PublishApi alloc] init];
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Publish-publishLiveData-0-javascript">
+                            <div class="tab-pane" id="examples-Publish-publishSensorData-0-javascript">
                               <pre class="prettyprint"><code class="language-js">var SmartCityTestbed = require('smart_city_testbed');
 var defaultClient = SmartCityTestbed.ApiClient.instance;
 
@@ -1907,14 +1594,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-api.publishLiveData(body, callback);
+api.publishSensorData(body, callback);
 </code></pre>
                             </div>
 
-                            <!--<div class="tab-pane" id="examples-Publish-publishLiveData-0-angular">
+                            <!--<div class="tab-pane" id="examples-Publish-publishSensorData-0-angular">
               <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
             </div>-->
-                            <div class="tab-pane" id="examples-Publish-publishLiveData-0-csharp">
+                            <div class="tab-pane" id="examples-Publish-publishSensorData-0-csharp">
                               <pre class="prettyprint"><code class="language-cs">using System;
 using System.Diagnostics;
 using IO.Swagger.Api;
@@ -1923,7 +1610,7 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class publishLiveDataExample
+    public class publishSensorDataExample
     {
         public void main()
         {
@@ -1938,12 +1625,12 @@ namespace Example
 
             try
             {
-                // Publish new sensor information to the middleware
-                apiInstance.publishLiveData(body);
+                // Used by Devices to Publish new sensor information to the middleware
+                apiInstance.publishSensorData(body);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling PublishApi.publishLiveData: " + e.Message );
+                Debug.Print("Exception when calling PublishApi.publishSensorData: " + e.Message );
             }
         }
     }
@@ -1951,7 +1638,7 @@ namespace Example
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Publish-publishLiveData-0-php">
+                            <div class="tab-pane" id="examples-Publish-publishSensorData-0-php">
                               <pre class="prettyprint"><code class="language-php"><&#63;php
 require_once(__DIR__ . '/vendor/autoload.php');
 
@@ -1964,14 +1651,14 @@ $api_instance = new Swagger\Client\Api\PublishApi();
 $body = ; // Body | Sensor Data object that needs to be added
 
 try {
-    $api_instance->publishLiveData($body);
+    $api_instance->publishSensorData($body);
 } catch (Exception $e) {
-    echo 'Exception when calling PublishApi->publishLiveData: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PublishApi->publishSensorData: ', $e->getMessage(), PHP_EOL;
 }
 ?></code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Publish-publishLiveData-0-perl">
+                            <div class="tab-pane" id="examples-Publish-publishSensorData-0-perl">
                               <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
 use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::PublishApi;
@@ -1985,14 +1672,14 @@ my $api_instance = WWW::SwaggerClient::PublishApi->new();
 my $body = WWW::SwaggerClient::Object::Body->new(); # Body | Sensor Data object that needs to be added
 
 eval { 
-    $api_instance->publishLiveData(body => $body);
+    $api_instance->publishSensorData(body => $body);
 };
 if ($@) {
-    warn "Exception when calling PublishApi->publishLiveData: $@\n";
+    warn "Exception when calling PublishApi->publishSensorData: $@\n";
 }</code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Publish-publishLiveData-0-python">
+                            <div class="tab-pane" id="examples-Publish-publishSensorData-0-python">
                               <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
 import time
 import swagger_client
@@ -2009,10 +1696,10 @@ api_instance = swagger_client.PublishApi()
 body =  # Body | Sensor Data object that needs to be added
 
 try: 
-    # Publish new sensor information to the middleware
-    api_instance.publish_live_data(body)
+    # Used by Devices to Publish new sensor information to the middleware
+    api_instance.publish_sensor_data(body)
 except ApiException as e:
-    print("Exception when calling PublishApi->publishLiveData: %s\n" % e)</code></pre>
+    print("Exception when calling PublishApi->publishSensorData: %s\n" % e)</code></pre>
                             </div>
                           </div>
 
@@ -2052,12 +1739,321 @@ $(document).ready(function() {
   }
 
   var view = new JSONSchemaView(schema,2,{isBodyParam: true});
-  var result = $('#d2e199_publishLiveData_body');
+  var result = $('#d2e199_publishSensorData_body');
   result.empty();
   result.append(view.render());
 });
 </script>
-<div id="d2e199_publishLiveData_body"></div>
+<div id="d2e199_publishSensorData_body"></div>
+</td>
+</tr>
+
+                            </table>
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - Data received by the Broker </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                            <h3> Status: 405 - Invalid input </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
+                    <div id="api-Publish-publishUpdate">
+                      <article id="api-Publish-publishUpdate-0" data-group="User" data-name="publishUpdate" data-version="0">
+                        <div class="pull-left">
+                          <h1>publishUpdate</h1>
+                          <p>Used by Application to Publish new command / update to the middleware</p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked">To publish data to the middleware, use the API with the following parameters in the body.</p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/publish/update</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-Publish-publishUpdate-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-Publish-publishUpdate-0-java">Java</a></li>
+                          <li class=""><a href="#examples-Publish-publishUpdate-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-Publish-publishUpdate-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-Publish-publishUpdate-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-Publish-publishUpdate-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-Publish-publishUpdate-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Publish-publishUpdate-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-Publish-publishUpdate-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-Publish-publishUpdate-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Publish-publishUpdate-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-Publish-publishUpdate-0-curl">
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST -H "apikey: [[apiKey]]" "https://smartcity.rbccps.org/api/0.1.0/publish/update"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-Publish-publishUpdate-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.PublishApi;
+
+import java.io.File;
+import java.util.*;
+
+public class PublishApiExample {
+
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        
+        // Configure API key authorization: api_key
+        ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+        api_key.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //api_key.setApiKeyPrefix("Token");
+
+        PublishApi apiInstance = new PublishApi();
+        Body_1 body = ; // Body_1 | Command Data object that needs to be added
+        try {
+            apiInstance.publishUpdate(body);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PublishApi#publishUpdate");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-Publish-publishUpdate-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.PublishApi;
+
+public class PublishApiExample {
+
+    public static void main(String[] args) {
+        PublishApi apiInstance = new PublishApi();
+        Body_1 body = ; // Body_1 | Command Data object that needs to be added
+        try {
+            apiInstance.publishUpdate(body);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling PublishApi#publishUpdate");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-Publish-publishUpdate-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-Publish-publishUpdate-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">Configuration *apiConfig = [Configuration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: api_key)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"apikey"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"apikey"];
+
+Body_1 *body = ; // Command Data object that needs to be added
+
+PublishApi *apiInstance = [[PublishApi alloc] init];
+
+// Used by Application to Publish new command / update to the middleware
+[apiInstance publishUpdateWith:body
+              completionHandler: ^(NSError* error) {
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Publish-publishUpdate-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var SmartCityTestbed = require('smart_city_testbed');
+var defaultClient = SmartCityTestbed.ApiClient.instance;
+
+// Configure API key authorization: api_key
+var api_key = defaultClient.authentications['api_key'];
+api_key.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.apiKeyPrefix['apikey'] = "Token"
+
+var api = new SmartCityTestbed.PublishApi()
+
+var body = ; // {Body_1} Command Data object that needs to be added
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+api.publishUpdate(body, callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-Publish-publishUpdate-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-Publish-publishUpdate-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class publishUpdateExample
+    {
+        public void main()
+        {
+            
+            // Configure API key authorization: api_key
+            Configuration.Default.ApiKey.Add("apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("apikey", "Bearer");
+
+            var apiInstance = new PublishApi();
+            var body = new Body_1(); // Body_1 | Command Data object that needs to be added
+
+            try
+            {
+                // Used by Application to Publish new command / update to the middleware
+                apiInstance.publishUpdate(body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling PublishApi.publishUpdate: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Publish-publishUpdate-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('apikey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('apikey', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\PublishApi();
+$body = ; // Body_1 | Command Data object that needs to be added
+
+try {
+    $api_instance->publishUpdate($body);
+} catch (Exception $e) {
+    echo 'Exception when calling PublishApi->publishUpdate: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Publish-publishUpdate-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::PublishApi;
+
+# Configure API key authorization: api_key
+$WWW::SwaggerClient::Configuration::api_key->{'apikey'} = 'YOUR_API_KEY';
+# uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+#$WWW::SwaggerClient::Configuration::api_key_prefix->{'apikey'} = "Bearer";
+
+my $api_instance = WWW::SwaggerClient::PublishApi->new();
+my $body = WWW::SwaggerClient::Object::Body_1->new(); # Body_1 | Command Data object that needs to be added
+
+eval { 
+    $api_instance->publishUpdate(body => $body);
+};
+if ($@) {
+    warn "Exception when calling PublishApi->publishUpdate: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Publish-publishUpdate-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: api_key
+swagger_client.configuration.api_key['apikey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# swagger_client.configuration.api_key_prefix['apikey'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = swagger_client.PublishApi()
+body =  # Body_1 | Command Data object that needs to be added
+
+try: 
+    # Used by Application to Publish new command / update to the middleware
+    api_instance.publish_update(body)
+except ApiException as e:
+    print("Exception when calling PublishApi->publishUpdate: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+
+
+                            <div class="methodsubtabletitle">Body parameters</div>
+                            <table id="methodsubtable">
+                              <tr>
+                                <th width="150px">Name</th>
+                                <th>Description</th>
+                              </tr>
+                                <tr><td style="width:150px;">body <span style="color:red;">*</span></td>
+<td>
+
+
+<script>
+$(document).ready(function() {
+  var schemaWrapper = {
+  "in" : "body",
+  "name" : "body",
+  "description" : "Command Data object that needs to be added",
+  "required" : true,
+  "schema" : {
+    "$ref" : "#/definitions/body_1"
+  }
+};
+  var schema = schemaWrapper.schema;
+  if (schema.$ref != null) {
+    schema = defsParser.$refs.get(schema.$ref);
+  } else {
+    schemaWrapper.definitions = Object.assign({}, defs);
+    $RefParser.dereference(schemaWrapper).catch(function(err) {
+      console.log(err);
+    });
+  }
+
+  var view = new JSONSchemaView(schema,2,{isBodyParam: true});
+  var result = $('#d2e199_publishUpdate_body');
+  result.empty();
+  result.append(view.render());
+});
+</script>
+<div id="d2e199_publishUpdate_body"></div>
 </td>
 </tr>
 
@@ -2088,320 +2084,11 @@ $(document).ready(function() {
                   </section>
                 <section id="api-Subscribe">
                   <h1>Subscribe</h1>
-                    <div id="api-Subscribe-bindForControlData">
-                      <article id="api-Subscribe-bindForControlData-0" data-group="User" data-name="bindForControlData" data-version="0">
+                    <div id="api-Subscribe-bindSensor">
+                      <article id="api-Subscribe-bindSensor-0" data-group="User" data-name="bindSensor" data-version="0">
                         <div class="pull-left">
-                          <h1>bindForControlData</h1>
-                          <p>Bind to a update topic in middleware</p>
-                        </div>
-                        <div class="pull-right"></div>
-                        <div class="clearfix"></div>
-                        <p></p>
-                        <p class="marked">To bind to a published control data in the middleware, use the API with the following parameters in the body.</p>
-                        <p></p>
-                        <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/update/queue/bind</span></code></pre>
-                        <p>
-                          <h3>Usage and SDK Samples</h3>
-                        </p>
-                        <ul class="nav nav-tabs nav-tabs-examples">
-                          <li class="active"><a href="#examples-Subscribe-bindForControlData-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-Subscribe-bindForControlData-0-java">Java</a></li>
-                          <li class=""><a href="#examples-Subscribe-bindForControlData-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-Subscribe-bindForControlData-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-Subscribe-bindForControlData-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-Subscribe-bindForControlData-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Subscribe-bindForControlData-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-Subscribe-bindForControlData-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-Subscribe-bindForControlData-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-Subscribe-bindForControlData-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-Subscribe-bindForControlData-0-python">Python</a></li>
-                        </ul>
-
-                        <div class="tab-content">
-                          <div class="tab-pane active" id="examples-Subscribe-bindForControlData-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST -H "apikey: [[apiKey]]" "https://smartcity.rbccps.org/api/0.1.0/update/queue/bind"</code></pre>
-                          </div>
-                          <div class="tab-pane" id="examples-Subscribe-bindForControlData-0-java">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
-import io.swagger.client.auth.*;
-import io.swagger.client.model.*;
-import io.swagger.client.api.SubscribeApi;
-
-import java.io.File;
-import java.util.*;
-
-public class SubscribeApiExample {
-
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        
-        // Configure API key authorization: api_key
-        ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
-        api_key.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //api_key.setApiKeyPrefix("Token");
-
-        SubscribeApi apiInstance = new SubscribeApi();
-        Body_4 body = ; // Body_4 | Sensor ID (Binding Key) that needs to be added
-        try {
-            apiInstance.bindForControlData(body);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling SubscribeApi#bindForControlData");
-            e.printStackTrace();
-        }
-    }
-}</code></pre>
-                          </div>
-
-                          <div class="tab-pane" id="examples-Subscribe-bindForControlData-0-android">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.SubscribeApi;
-
-public class SubscribeApiExample {
-
-    public static void main(String[] args) {
-        SubscribeApi apiInstance = new SubscribeApi();
-        Body_4 body = ; // Body_4 | Sensor ID (Binding Key) that needs to be added
-        try {
-            apiInstance.bindForControlData(body);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling SubscribeApi#bindForControlData");
-            e.printStackTrace();
-        }
-    }
-}</code></pre>
-                          </div>
-  <!--
-  <div class="tab-pane" id="examples-Subscribe-bindForControlData-0-groovy">
-  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
-  </div> -->
-                            <div class="tab-pane" id="examples-Subscribe-bindForControlData-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">Configuration *apiConfig = [Configuration sharedConfig];
-
-// Configure API key authorization: (authentication scheme: api_key)
-[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"apikey"];
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"apikey"];
-
-Body_4 *body = ; // Sensor ID (Binding Key) that needs to be added
-
-SubscribeApi *apiInstance = [[SubscribeApi alloc] init];
-
-// Bind to a update topic in middleware
-[apiInstance bindForControlDataWith:body
-              completionHandler: ^(NSError* error) {
-                            if (error) {
-                                NSLog(@"Error: %@", error);
-                            }
-                        }];
-</code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-Subscribe-bindForControlData-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var SmartCityTestbed = require('smart_city_testbed');
-var defaultClient = SmartCityTestbed.ApiClient.instance;
-
-// Configure API key authorization: api_key
-var api_key = defaultClient.authentications['api_key'];
-api_key.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api_key.apiKeyPrefix['apikey'] = "Token"
-
-var api = new SmartCityTestbed.SubscribeApi()
-
-var body = ; // {Body_4} Sensor ID (Binding Key) that needs to be added
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-api.bindForControlData(body, callback);
-</code></pre>
-                            </div>
-
-                            <!--<div class="tab-pane" id="examples-Subscribe-bindForControlData-0-angular">
-              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
-            </div>-->
-                            <div class="tab-pane" id="examples-Subscribe-bindForControlData-0-csharp">
-                              <pre class="prettyprint"><code class="language-cs">using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class bindForControlDataExample
-    {
-        public void main()
-        {
-            
-            // Configure API key authorization: api_key
-            Configuration.Default.ApiKey.Add("apikey", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.ApiKeyPrefix.Add("apikey", "Bearer");
-
-            var apiInstance = new SubscribeApi();
-            var body = new Body_4(); // Body_4 | Sensor ID (Binding Key) that needs to be added
-
-            try
-            {
-                // Bind to a update topic in middleware
-                apiInstance.bindForControlData(body);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling SubscribeApi.bindForControlData: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-Subscribe-bindForControlData-0-php">
-                              <pre class="prettyprint"><code class="language-php"><&#63;php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: api_key
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('apikey', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('apikey', 'Bearer');
-
-$api_instance = new Swagger\Client\Api\SubscribeApi();
-$body = ; // Body_4 | Sensor ID (Binding Key) that needs to be added
-
-try {
-    $api_instance->bindForControlData($body);
-} catch (Exception $e) {
-    echo 'Exception when calling SubscribeApi->bindForControlData: ', $e->getMessage(), PHP_EOL;
-}
-?></code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-Subscribe-bindForControlData-0-perl">
-                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
-use WWW::SwaggerClient::Configuration;
-use WWW::SwaggerClient::SubscribeApi;
-
-# Configure API key authorization: api_key
-$WWW::SwaggerClient::Configuration::api_key->{'apikey'} = 'YOUR_API_KEY';
-# uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-#$WWW::SwaggerClient::Configuration::api_key_prefix->{'apikey'} = "Bearer";
-
-my $api_instance = WWW::SwaggerClient::SubscribeApi->new();
-my $body = WWW::SwaggerClient::Object::Body_4->new(); # Body_4 | Sensor ID (Binding Key) that needs to be added
-
-eval { 
-    $api_instance->bindForControlData(body => $body);
-};
-if ($@) {
-    warn "Exception when calling SubscribeApi->bindForControlData: $@\n";
-}</code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-Subscribe-bindForControlData-0-python">
-                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
-import time
-import swagger_client
-from swagger_client.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: api_key
-swagger_client.configuration.api_key['apikey'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['apikey'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = swagger_client.SubscribeApi()
-body =  # Body_4 | Sensor ID (Binding Key) that needs to be added
-
-try: 
-    # Bind to a update topic in middleware
-    api_instance.bind_for_control_data(body)
-except ApiException as e:
-    print("Exception when calling SubscribeApi->bindForControlData: %s\n" % e)</code></pre>
-                            </div>
-                          </div>
-
-                          <h2>Parameters</h2>
-
-
-
-                            <div class="methodsubtabletitle">Body parameters</div>
-                            <table id="methodsubtable">
-                              <tr>
-                                <th width="150px">Name</th>
-                                <th>Description</th>
-                              </tr>
-                                <tr><td style="width:150px;">body <span style="color:red;">*</span></td>
-<td>
-
-
-<script>
-$(document).ready(function() {
-  var schemaWrapper = {
-  "in" : "body",
-  "name" : "body",
-  "description" : "Sensor ID (Binding Key) that needs to be added",
-  "required" : true,
-  "schema" : {
-    "$ref" : "#/definitions/body_4"
-  }
-};
-  var schema = schemaWrapper.schema;
-  if (schema.$ref != null) {
-    schema = defsParser.$refs.get(schema.$ref);
-  } else {
-    schemaWrapper.definitions = Object.assign({}, defs);
-    $RefParser.dereference(schemaWrapper).catch(function(err) {
-      console.log(err);
-    });
-  }
-
-  var view = new JSONSchemaView(schema,2,{isBodyParam: true});
-  var result = $('#d2e199_bindForControlData_body');
-  result.empty();
-  result.append(view.render());
-});
-</script>
-<div id="d2e199_bindForControlData_body"></div>
-</td>
-</tr>
-
-                            </table>
-
-
-
-                          <h2>Responses</h2>
-                            <h3> Status: 200 - Bind Success </h3>
-
-                            <ul class="nav nav-tabs nav-tabs-examples" >
-                            </ul>
-
-                            <div class="tab-content" style='margin-bottom: 10px;'>
-                            </div>
-
-                            <h3> Status: 405 - Invalid input </h3>
-
-                            <ul class="nav nav-tabs nav-tabs-examples" >
-                            </ul>
-
-                            <div class="tab-content" style='margin-bottom: 10px;'>
-                            </div>
-
-                        </article>
-                      </div>
-                      <hr>
-                    <div id="api-Subscribe-bindForLiveData">
-                      <article id="api-Subscribe-bindForLiveData-0" data-group="User" data-name="bindForLiveData" data-version="0">
-                        <div class="pull-left">
-                          <h1>bindForLiveData</h1>
-                          <p>Bind to a sensor topic in middleware</p>
+                          <h1>bindSensor</h1>
+                          <p>Used by Application to Bind to a sensor topic in middleware</p>
                         </div>
                         <div class="pull-right"></div>
                         <div class="clearfix"></div>
@@ -2409,29 +2096,29 @@ $(document).ready(function() {
                         <p class="marked">To bind to a published data in the middleware, use the API with the following parameters in the body.</p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/stream/queue/bind</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/subscribe/data/queue/bind</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
                         <ul class="nav nav-tabs nav-tabs-examples">
-                          <li class="active"><a href="#examples-Subscribe-bindForLiveData-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-Subscribe-bindForLiveData-0-java">Java</a></li>
-                          <li class=""><a href="#examples-Subscribe-bindForLiveData-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-Subscribe-bindForLiveData-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-Subscribe-bindForLiveData-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-Subscribe-bindForLiveData-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Subscribe-bindForLiveData-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-Subscribe-bindForLiveData-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-Subscribe-bindForLiveData-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-Subscribe-bindForLiveData-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-Subscribe-bindForLiveData-0-python">Python</a></li>
+                          <li class="active"><a href="#examples-Subscribe-bindSensor-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-Subscribe-bindSensor-0-java">Java</a></li>
+                          <li class=""><a href="#examples-Subscribe-bindSensor-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-Subscribe-bindSensor-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-Subscribe-bindSensor-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-Subscribe-bindSensor-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-Subscribe-bindSensor-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Subscribe-bindSensor-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-Subscribe-bindSensor-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-Subscribe-bindSensor-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Subscribe-bindSensor-0-python">Python</a></li>
                         </ul>
 
                         <div class="tab-content">
-                          <div class="tab-pane active" id="examples-Subscribe-bindForLiveData-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST -H "apikey: [[apiKey]]" "https://smartcity.rbccps.org/api/0.1.0/stream/queue/bind"</code></pre>
+                          <div class="tab-pane active" id="examples-Subscribe-bindSensor-0-curl">
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST -H "apikey: [[apiKey]]" "https://smartcity.rbccps.org/api/0.1.0/subscribe/data/queue/bind"</code></pre>
                           </div>
-                          <div class="tab-pane" id="examples-Subscribe-bindForLiveData-0-java">
+                          <div class="tab-pane" id="examples-Subscribe-bindSensor-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
 import io.swagger.client.auth.*;
 import io.swagger.client.model.*;
@@ -2454,16 +2141,16 @@ public class SubscribeApiExample {
         SubscribeApi apiInstance = new SubscribeApi();
         Body_2 body = ; // Body_2 | Sensor ID (Binding Key) that needs to be added
         try {
-            apiInstance.bindForLiveData(body);
+            apiInstance.bindSensor(body);
         } catch (ApiException e) {
-            System.err.println("Exception when calling SubscribeApi#bindForLiveData");
+            System.err.println("Exception when calling SubscribeApi#bindSensor");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
 
-                          <div class="tab-pane" id="examples-Subscribe-bindForLiveData-0-android">
+                          <div class="tab-pane" id="examples-Subscribe-bindSensor-0-android">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.SubscribeApi;
 
 public class SubscribeApiExample {
@@ -2472,19 +2159,19 @@ public class SubscribeApiExample {
         SubscribeApi apiInstance = new SubscribeApi();
         Body_2 body = ; // Body_2 | Sensor ID (Binding Key) that needs to be added
         try {
-            apiInstance.bindForLiveData(body);
+            apiInstance.bindSensor(body);
         } catch (ApiException e) {
-            System.err.println("Exception when calling SubscribeApi#bindForLiveData");
+            System.err.println("Exception when calling SubscribeApi#bindSensor");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
   <!--
-  <div class="tab-pane" id="examples-Subscribe-bindForLiveData-0-groovy">
+  <div class="tab-pane" id="examples-Subscribe-bindSensor-0-groovy">
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
-                            <div class="tab-pane" id="examples-Subscribe-bindForLiveData-0-objc">
+                            <div class="tab-pane" id="examples-Subscribe-bindSensor-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">Configuration *apiConfig = [Configuration sharedConfig];
 
 // Configure API key authorization: (authentication scheme: api_key)
@@ -2496,8 +2183,8 @@ Body_2 *body = ; // Sensor ID (Binding Key) that needs to be added
 
 SubscribeApi *apiInstance = [[SubscribeApi alloc] init];
 
-// Bind to a sensor topic in middleware
-[apiInstance bindForLiveDataWith:body
+// Used by Application to Bind to a sensor topic in middleware
+[apiInstance bindSensorWith:body
               completionHandler: ^(NSError* error) {
                             if (error) {
                                 NSLog(@"Error: %@", error);
@@ -2506,7 +2193,7 @@ SubscribeApi *apiInstance = [[SubscribeApi alloc] init];
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Subscribe-bindForLiveData-0-javascript">
+                            <div class="tab-pane" id="examples-Subscribe-bindSensor-0-javascript">
                               <pre class="prettyprint"><code class="language-js">var SmartCityTestbed = require('smart_city_testbed');
 var defaultClient = SmartCityTestbed.ApiClient.instance;
 
@@ -2528,14 +2215,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-api.bindForLiveData(body, callback);
+api.bindSensor(body, callback);
 </code></pre>
                             </div>
 
-                            <!--<div class="tab-pane" id="examples-Subscribe-bindForLiveData-0-angular">
+                            <!--<div class="tab-pane" id="examples-Subscribe-bindSensor-0-angular">
               <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
             </div>-->
-                            <div class="tab-pane" id="examples-Subscribe-bindForLiveData-0-csharp">
+                            <div class="tab-pane" id="examples-Subscribe-bindSensor-0-csharp">
                               <pre class="prettyprint"><code class="language-cs">using System;
 using System.Diagnostics;
 using IO.Swagger.Api;
@@ -2544,7 +2231,7 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class bindForLiveDataExample
+    public class bindSensorExample
     {
         public void main()
         {
@@ -2559,12 +2246,12 @@ namespace Example
 
             try
             {
-                // Bind to a sensor topic in middleware
-                apiInstance.bindForLiveData(body);
+                // Used by Application to Bind to a sensor topic in middleware
+                apiInstance.bindSensor(body);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling SubscribeApi.bindForLiveData: " + e.Message );
+                Debug.Print("Exception when calling SubscribeApi.bindSensor: " + e.Message );
             }
         }
     }
@@ -2572,7 +2259,7 @@ namespace Example
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Subscribe-bindForLiveData-0-php">
+                            <div class="tab-pane" id="examples-Subscribe-bindSensor-0-php">
                               <pre class="prettyprint"><code class="language-php"><&#63;php
 require_once(__DIR__ . '/vendor/autoload.php');
 
@@ -2585,14 +2272,14 @@ $api_instance = new Swagger\Client\Api\SubscribeApi();
 $body = ; // Body_2 | Sensor ID (Binding Key) that needs to be added
 
 try {
-    $api_instance->bindForLiveData($body);
+    $api_instance->bindSensor($body);
 } catch (Exception $e) {
-    echo 'Exception when calling SubscribeApi->bindForLiveData: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SubscribeApi->bindSensor: ', $e->getMessage(), PHP_EOL;
 }
 ?></code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Subscribe-bindForLiveData-0-perl">
+                            <div class="tab-pane" id="examples-Subscribe-bindSensor-0-perl">
                               <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
 use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::SubscribeApi;
@@ -2606,14 +2293,14 @@ my $api_instance = WWW::SwaggerClient::SubscribeApi->new();
 my $body = WWW::SwaggerClient::Object::Body_2->new(); # Body_2 | Sensor ID (Binding Key) that needs to be added
 
 eval { 
-    $api_instance->bindForLiveData(body => $body);
+    $api_instance->bindSensor(body => $body);
 };
 if ($@) {
-    warn "Exception when calling SubscribeApi->bindForLiveData: $@\n";
+    warn "Exception when calling SubscribeApi->bindSensor: $@\n";
 }</code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Subscribe-bindForLiveData-0-python">
+                            <div class="tab-pane" id="examples-Subscribe-bindSensor-0-python">
                               <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
 import time
 import swagger_client
@@ -2630,10 +2317,10 @@ api_instance = swagger_client.SubscribeApi()
 body =  # Body_2 | Sensor ID (Binding Key) that needs to be added
 
 try: 
-    # Bind to a sensor topic in middleware
-    api_instance.bind_for_live_data(body)
+    # Used by Application to Bind to a sensor topic in middleware
+    api_instance.bind_sensor(body)
 except ApiException as e:
-    print("Exception when calling SubscribeApi->bindForLiveData: %s\n" % e)</code></pre>
+    print("Exception when calling SubscribeApi->bindSensor: %s\n" % e)</code></pre>
                             </div>
                           </div>
 
@@ -2673,12 +2360,12 @@ $(document).ready(function() {
   }
 
   var view = new JSONSchemaView(schema,2,{isBodyParam: true});
-  var result = $('#d2e199_bindForLiveData_body');
+  var result = $('#d2e199_bindSensor_body');
   result.empty();
   result.append(view.render());
 });
 </script>
-<div id="d2e199_bindForLiveData_body"></div>
+<div id="d2e199_bindSensor_body"></div>
 </td>
 </tr>
 
@@ -2706,41 +2393,41 @@ $(document).ready(function() {
                         </article>
                       </div>
                       <hr>
-                    <div id="api-Subscribe-subscribeCommandData">
-                      <article id="api-Subscribe-subscribeCommandData-0" data-group="User" data-name="subscribeCommandData" data-version="0">
+                    <div id="api-Subscribe-bindUpdate">
+                      <article id="api-Subscribe-bindUpdate-0" data-group="User" data-name="bindUpdate" data-version="0">
                         <div class="pull-left">
-                          <h1>subscribeCommandData</h1>
-                          <p>Subscribe for update information</p>
+                          <h1>bindUpdate</h1>
+                          <p>Used by Device to Bind to a update topic in middleware</p>
                         </div>
                         <div class="pull-right"></div>
                         <div class="clearfix"></div>
                         <p></p>
-                        <p class="marked">To subscribe control data from the middleware, use the API with the following parameters</p>
+                        <p class="marked">To bind to a published control data in the middleware, use the API with the following parameters in the body.</p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/update/queue</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/subscribe/update/queue/bind</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
                         <ul class="nav nav-tabs nav-tabs-examples">
-                          <li class="active"><a href="#examples-Subscribe-subscribeCommandData-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-Subscribe-subscribeCommandData-0-java">Java</a></li>
-                          <li class=""><a href="#examples-Subscribe-subscribeCommandData-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-Subscribe-subscribeCommandData-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-Subscribe-subscribeCommandData-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-Subscribe-subscribeCommandData-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Subscribe-subscribeCommandData-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-Subscribe-subscribeCommandData-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-Subscribe-subscribeCommandData-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-Subscribe-subscribeCommandData-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-Subscribe-subscribeCommandData-0-python">Python</a></li>
+                          <li class="active"><a href="#examples-Subscribe-bindUpdate-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-Subscribe-bindUpdate-0-java">Java</a></li>
+                          <li class=""><a href="#examples-Subscribe-bindUpdate-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-Subscribe-bindUpdate-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-Subscribe-bindUpdate-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-Subscribe-bindUpdate-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-Subscribe-bindUpdate-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Subscribe-bindUpdate-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-Subscribe-bindUpdate-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-Subscribe-bindUpdate-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Subscribe-bindUpdate-0-python">Python</a></li>
                         </ul>
 
                         <div class="tab-content">
-                          <div class="tab-pane active" id="examples-Subscribe-subscribeCommandData-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET -H "apikey: [[apiKey]]" "https://smartcity.rbccps.org/api/0.1.0/update/queue?name="</code></pre>
+                          <div class="tab-pane active" id="examples-Subscribe-bindUpdate-0-curl">
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST -H "apikey: [[apiKey]]" "https://smartcity.rbccps.org/api/0.1.0/subscribe/update/queue/bind"</code></pre>
                           </div>
-                          <div class="tab-pane" id="examples-Subscribe-subscribeCommandData-0-java">
+                          <div class="tab-pane" id="examples-Subscribe-bindUpdate-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
 import io.swagger.client.auth.*;
 import io.swagger.client.model.*;
@@ -2761,39 +2448,39 @@ public class SubscribeApiExample {
         //api_key.setApiKeyPrefix("Token");
 
         SubscribeApi apiInstance = new SubscribeApi();
-        String name = name_example; // String | The queue name to subscribe.
+        Body_4 body = ; // Body_4 | Sensor ID (Binding Key) that needs to be added
         try {
-            apiInstance.subscribeCommandData(name);
+            apiInstance.bindUpdate(body);
         } catch (ApiException e) {
-            System.err.println("Exception when calling SubscribeApi#subscribeCommandData");
+            System.err.println("Exception when calling SubscribeApi#bindUpdate");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
 
-                          <div class="tab-pane" id="examples-Subscribe-subscribeCommandData-0-android">
+                          <div class="tab-pane" id="examples-Subscribe-bindUpdate-0-android">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.SubscribeApi;
 
 public class SubscribeApiExample {
 
     public static void main(String[] args) {
         SubscribeApi apiInstance = new SubscribeApi();
-        String name = name_example; // String | The queue name to subscribe.
+        Body_4 body = ; // Body_4 | Sensor ID (Binding Key) that needs to be added
         try {
-            apiInstance.subscribeCommandData(name);
+            apiInstance.bindUpdate(body);
         } catch (ApiException e) {
-            System.err.println("Exception when calling SubscribeApi#subscribeCommandData");
+            System.err.println("Exception when calling SubscribeApi#bindUpdate");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
   <!--
-  <div class="tab-pane" id="examples-Subscribe-subscribeCommandData-0-groovy">
+  <div class="tab-pane" id="examples-Subscribe-bindUpdate-0-groovy">
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
-                            <div class="tab-pane" id="examples-Subscribe-subscribeCommandData-0-objc">
+                            <div class="tab-pane" id="examples-Subscribe-bindUpdate-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">Configuration *apiConfig = [Configuration sharedConfig];
 
 // Configure API key authorization: (authentication scheme: api_key)
@@ -2801,12 +2488,12 @@ public class SubscribeApiExample {
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 //[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"apikey"];
 
-String *name = name_example; // The queue name to subscribe. (optional)
+Body_4 *body = ; // Sensor ID (Binding Key) that needs to be added
 
 SubscribeApi *apiInstance = [[SubscribeApi alloc] init];
 
-// Subscribe for update information
-[apiInstance subscribeCommandDataWith:name
+// Used by Device to Bind to a update topic in middleware
+[apiInstance bindUpdateWith:body
               completionHandler: ^(NSError* error) {
                             if (error) {
                                 NSLog(@"Error: %@", error);
@@ -2815,7 +2502,7 @@ SubscribeApi *apiInstance = [[SubscribeApi alloc] init];
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Subscribe-subscribeCommandData-0-javascript">
+                            <div class="tab-pane" id="examples-Subscribe-bindUpdate-0-javascript">
                               <pre class="prettyprint"><code class="language-js">var SmartCityTestbed = require('smart_city_testbed');
 var defaultClient = SmartCityTestbed.ApiClient.instance;
 
@@ -2827,9 +2514,8 @@ api_key.apiKey = "YOUR API KEY"
 
 var api = new SmartCityTestbed.SubscribeApi()
 
-var opts = { 
-  'name': name_example // {String} The queue name to subscribe.
-};
+var body = ; // {Body_4} Sensor ID (Binding Key) that needs to be added
+
 
 var callback = function(error, data, response) {
   if (error) {
@@ -2838,14 +2524,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-api.subscribeCommandData(opts, callback);
+api.bindUpdate(body, callback);
 </code></pre>
                             </div>
 
-                            <!--<div class="tab-pane" id="examples-Subscribe-subscribeCommandData-0-angular">
+                            <!--<div class="tab-pane" id="examples-Subscribe-bindUpdate-0-angular">
               <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
             </div>-->
-                            <div class="tab-pane" id="examples-Subscribe-subscribeCommandData-0-csharp">
+                            <div class="tab-pane" id="examples-Subscribe-bindUpdate-0-csharp">
                               <pre class="prettyprint"><code class="language-cs">using System;
 using System.Diagnostics;
 using IO.Swagger.Api;
@@ -2854,7 +2540,7 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class subscribeCommandDataExample
+    public class bindUpdateExample
     {
         public void main()
         {
@@ -2865,16 +2551,16 @@ namespace Example
             // Configuration.Default.ApiKeyPrefix.Add("apikey", "Bearer");
 
             var apiInstance = new SubscribeApi();
-            var name = name_example;  // String | The queue name to subscribe. (optional) 
+            var body = new Body_4(); // Body_4 | Sensor ID (Binding Key) that needs to be added
 
             try
             {
-                // Subscribe for update information
-                apiInstance.subscribeCommandData(name);
+                // Used by Device to Bind to a update topic in middleware
+                apiInstance.bindUpdate(body);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling SubscribeApi.subscribeCommandData: " + e.Message );
+                Debug.Print("Exception when calling SubscribeApi.bindUpdate: " + e.Message );
             }
         }
     }
@@ -2882,7 +2568,7 @@ namespace Example
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Subscribe-subscribeCommandData-0-php">
+                            <div class="tab-pane" id="examples-Subscribe-bindUpdate-0-php">
                               <pre class="prettyprint"><code class="language-php"><&#63;php
 require_once(__DIR__ . '/vendor/autoload.php');
 
@@ -2892,17 +2578,17 @@ Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('apikey', 'YO
 // Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('apikey', 'Bearer');
 
 $api_instance = new Swagger\Client\Api\SubscribeApi();
-$name = name_example; // String | The queue name to subscribe.
+$body = ; // Body_4 | Sensor ID (Binding Key) that needs to be added
 
 try {
-    $api_instance->subscribeCommandData($name);
+    $api_instance->bindUpdate($body);
 } catch (Exception $e) {
-    echo 'Exception when calling SubscribeApi->subscribeCommandData: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SubscribeApi->bindUpdate: ', $e->getMessage(), PHP_EOL;
 }
 ?></code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Subscribe-subscribeCommandData-0-perl">
+                            <div class="tab-pane" id="examples-Subscribe-bindUpdate-0-perl">
                               <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
 use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::SubscribeApi;
@@ -2913,17 +2599,17 @@ $WWW::SwaggerClient::Configuration::api_key->{'apikey'} = 'YOUR_API_KEY';
 #$WWW::SwaggerClient::Configuration::api_key_prefix->{'apikey'} = "Bearer";
 
 my $api_instance = WWW::SwaggerClient::SubscribeApi->new();
-my $name = name_example; # String | The queue name to subscribe.
+my $body = WWW::SwaggerClient::Object::Body_4->new(); # Body_4 | Sensor ID (Binding Key) that needs to be added
 
 eval { 
-    $api_instance->subscribeCommandData(name => $name);
+    $api_instance->bindUpdate(body => $body);
 };
 if ($@) {
-    warn "Exception when calling SubscribeApi->subscribeCommandData: $@\n";
+    warn "Exception when calling SubscribeApi->bindUpdate: $@\n";
 }</code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Subscribe-subscribeCommandData-0-python">
+                            <div class="tab-pane" id="examples-Subscribe-bindUpdate-0-python">
                               <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
 import time
 import swagger_client
@@ -2937,602 +2623,13 @@ swagger_client.configuration.api_key['apikey'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = swagger_client.SubscribeApi()
-name = name_example # String | The queue name to subscribe. (optional)
+body =  # Body_4 | Sensor ID (Binding Key) that needs to be added
 
 try: 
-    # Subscribe for update information
-    api_instance.subscribe_command_data(name=name)
+    # Used by Device to Bind to a update topic in middleware
+    api_instance.bind_update(body)
 except ApiException as e:
-    print("Exception when calling SubscribeApi->subscribeCommandData: %s\n" % e)</code></pre>
-                            </div>
-                          </div>
-
-                          <h2>Parameters</h2>
-
-
-
-
-
-                            <div class="methodsubtabletitle">Query parameters</div>
-                            <table id="methodsubtable">
-                              <tr>
-                                <th width="150px">Name</th>
-                                <th>Description</th>
-                              </tr>
-                                <tr><td style="width:150px;">name</td>
-<td>
-
-
-    <div id="d2e199_subscribeCommandData_name">
-        <div class="json-schema-view">
-            <div class="primitive">
-                <span class="type">
-                    String
-                </span>
-
-                    <div class="inner description">
-                        The queue name to subscribe.
-                    </div>
-            </div>
-        </div>
-    </div>
-</td>
-</tr>
-
-                            </table>
-
-                          <h2>Responses</h2>
-                            <h3> Status: 200 - Data received by the Broker </h3>
-
-                            <ul class="nav nav-tabs nav-tabs-examples" >
-                            </ul>
-
-                            <div class="tab-content" style='margin-bottom: 10px;'>
-                            </div>
-
-                            <h3> Status: 405 - Invalid input </h3>
-
-                            <ul class="nav nav-tabs nav-tabs-examples" >
-                            </ul>
-
-                            <div class="tab-content" style='margin-bottom: 10px;'>
-                            </div>
-
-                        </article>
-                      </div>
-                      <hr>
-                    <div id="api-Subscribe-subscribeLiveData">
-                      <article id="api-Subscribe-subscribeLiveData-0" data-group="User" data-name="subscribeLiveData" data-version="0">
-                        <div class="pull-left">
-                          <h1>subscribeLiveData</h1>
-                          <p>Subscribe for sensor information</p>
-                        </div>
-                        <div class="pull-right"></div>
-                        <div class="clearfix"></div>
-                        <p></p>
-                        <p class="marked">To subscribe data from the middleware, use the API with the following parameters</p>
-                        <p></p>
-                        <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/stream/queue</span></code></pre>
-                        <p>
-                          <h3>Usage and SDK Samples</h3>
-                        </p>
-                        <ul class="nav nav-tabs nav-tabs-examples">
-                          <li class="active"><a href="#examples-Subscribe-subscribeLiveData-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-Subscribe-subscribeLiveData-0-java">Java</a></li>
-                          <li class=""><a href="#examples-Subscribe-subscribeLiveData-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-Subscribe-subscribeLiveData-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-Subscribe-subscribeLiveData-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-Subscribe-subscribeLiveData-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Subscribe-subscribeLiveData-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-Subscribe-subscribeLiveData-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-Subscribe-subscribeLiveData-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-Subscribe-subscribeLiveData-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-Subscribe-subscribeLiveData-0-python">Python</a></li>
-                        </ul>
-
-                        <div class="tab-content">
-                          <div class="tab-pane active" id="examples-Subscribe-subscribeLiveData-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X GET -H "apikey: [[apiKey]]" "https://smartcity.rbccps.org/api/0.1.0/stream/queue?name="</code></pre>
-                          </div>
-                          <div class="tab-pane" id="examples-Subscribe-subscribeLiveData-0-java">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
-import io.swagger.client.auth.*;
-import io.swagger.client.model.*;
-import io.swagger.client.api.SubscribeApi;
-
-import java.io.File;
-import java.util.*;
-
-public class SubscribeApiExample {
-
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        
-        // Configure API key authorization: api_key
-        ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
-        api_key.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //api_key.setApiKeyPrefix("Token");
-
-        SubscribeApi apiInstance = new SubscribeApi();
-        String name = name_example; // String | The queue name to subscribe.
-        try {
-            apiInstance.subscribeLiveData(name);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling SubscribeApi#subscribeLiveData");
-            e.printStackTrace();
-        }
-    }
-}</code></pre>
-                          </div>
-
-                          <div class="tab-pane" id="examples-Subscribe-subscribeLiveData-0-android">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.SubscribeApi;
-
-public class SubscribeApiExample {
-
-    public static void main(String[] args) {
-        SubscribeApi apiInstance = new SubscribeApi();
-        String name = name_example; // String | The queue name to subscribe.
-        try {
-            apiInstance.subscribeLiveData(name);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling SubscribeApi#subscribeLiveData");
-            e.printStackTrace();
-        }
-    }
-}</code></pre>
-                          </div>
-  <!--
-  <div class="tab-pane" id="examples-Subscribe-subscribeLiveData-0-groovy">
-  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
-  </div> -->
-                            <div class="tab-pane" id="examples-Subscribe-subscribeLiveData-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">Configuration *apiConfig = [Configuration sharedConfig];
-
-// Configure API key authorization: (authentication scheme: api_key)
-[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"apikey"];
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"apikey"];
-
-String *name = name_example; // The queue name to subscribe. (optional)
-
-SubscribeApi *apiInstance = [[SubscribeApi alloc] init];
-
-// Subscribe for sensor information
-[apiInstance subscribeLiveDataWith:name
-              completionHandler: ^(NSError* error) {
-                            if (error) {
-                                NSLog(@"Error: %@", error);
-                            }
-                        }];
-</code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-Subscribe-subscribeLiveData-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var SmartCityTestbed = require('smart_city_testbed');
-var defaultClient = SmartCityTestbed.ApiClient.instance;
-
-// Configure API key authorization: api_key
-var api_key = defaultClient.authentications['api_key'];
-api_key.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api_key.apiKeyPrefix['apikey'] = "Token"
-
-var api = new SmartCityTestbed.SubscribeApi()
-
-var opts = { 
-  'name': name_example // {String} The queue name to subscribe.
-};
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-api.subscribeLiveData(opts, callback);
-</code></pre>
-                            </div>
-
-                            <!--<div class="tab-pane" id="examples-Subscribe-subscribeLiveData-0-angular">
-              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
-            </div>-->
-                            <div class="tab-pane" id="examples-Subscribe-subscribeLiveData-0-csharp">
-                              <pre class="prettyprint"><code class="language-cs">using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class subscribeLiveDataExample
-    {
-        public void main()
-        {
-            
-            // Configure API key authorization: api_key
-            Configuration.Default.ApiKey.Add("apikey", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.ApiKeyPrefix.Add("apikey", "Bearer");
-
-            var apiInstance = new SubscribeApi();
-            var name = name_example;  // String | The queue name to subscribe. (optional) 
-
-            try
-            {
-                // Subscribe for sensor information
-                apiInstance.subscribeLiveData(name);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling SubscribeApi.subscribeLiveData: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-Subscribe-subscribeLiveData-0-php">
-                              <pre class="prettyprint"><code class="language-php"><&#63;php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: api_key
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('apikey', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('apikey', 'Bearer');
-
-$api_instance = new Swagger\Client\Api\SubscribeApi();
-$name = name_example; // String | The queue name to subscribe.
-
-try {
-    $api_instance->subscribeLiveData($name);
-} catch (Exception $e) {
-    echo 'Exception when calling SubscribeApi->subscribeLiveData: ', $e->getMessage(), PHP_EOL;
-}
-?></code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-Subscribe-subscribeLiveData-0-perl">
-                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
-use WWW::SwaggerClient::Configuration;
-use WWW::SwaggerClient::SubscribeApi;
-
-# Configure API key authorization: api_key
-$WWW::SwaggerClient::Configuration::api_key->{'apikey'} = 'YOUR_API_KEY';
-# uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-#$WWW::SwaggerClient::Configuration::api_key_prefix->{'apikey'} = "Bearer";
-
-my $api_instance = WWW::SwaggerClient::SubscribeApi->new();
-my $name = name_example; # String | The queue name to subscribe.
-
-eval { 
-    $api_instance->subscribeLiveData(name => $name);
-};
-if ($@) {
-    warn "Exception when calling SubscribeApi->subscribeLiveData: $@\n";
-}</code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-Subscribe-subscribeLiveData-0-python">
-                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
-import time
-import swagger_client
-from swagger_client.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: api_key
-swagger_client.configuration.api_key['apikey'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['apikey'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = swagger_client.SubscribeApi()
-name = name_example # String | The queue name to subscribe. (optional)
-
-try: 
-    # Subscribe for sensor information
-    api_instance.subscribe_live_data(name=name)
-except ApiException as e:
-    print("Exception when calling SubscribeApi->subscribeLiveData: %s\n" % e)</code></pre>
-                            </div>
-                          </div>
-
-                          <h2>Parameters</h2>
-
-
-
-
-
-                            <div class="methodsubtabletitle">Query parameters</div>
-                            <table id="methodsubtable">
-                              <tr>
-                                <th width="150px">Name</th>
-                                <th>Description</th>
-                              </tr>
-                                <tr><td style="width:150px;">name</td>
-<td>
-
-
-    <div id="d2e199_subscribeLiveData_name">
-        <div class="json-schema-view">
-            <div class="primitive">
-                <span class="type">
-                    String
-                </span>
-
-                    <div class="inner description">
-                        The queue name to subscribe.
-                    </div>
-            </div>
-        </div>
-    </div>
-</td>
-</tr>
-
-                            </table>
-
-                          <h2>Responses</h2>
-                            <h3> Status: 200 - Data received by the Broker </h3>
-
-                            <ul class="nav nav-tabs nav-tabs-examples" >
-                            </ul>
-
-                            <div class="tab-content" style='margin-bottom: 10px;'>
-                            </div>
-
-                            <h3> Status: 405 - Invalid input </h3>
-
-                            <ul class="nav nav-tabs nav-tabs-examples" >
-                            </ul>
-
-                            <div class="tab-content" style='margin-bottom: 10px;'>
-                            </div>
-
-                        </article>
-                      </div>
-                      <hr>
-                    <div id="api-Subscribe-unBindControlData">
-                      <article id="api-Subscribe-unBindControlData-0" data-group="User" data-name="unBindControlData" data-version="0">
-                        <div class="pull-left">
-                          <h1>unBindControlData</h1>
-                          <p>UnBind to a update topic in middleware</p>
-                        </div>
-                        <div class="pull-right"></div>
-                        <div class="clearfix"></div>
-                        <p></p>
-                        <p class="marked">To unbind from a published control data in the middleware, use the API with the following parameters in the body.</p>
-                        <p></p>
-                        <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/update/queue/unbind</span></code></pre>
-                        <p>
-                          <h3>Usage and SDK Samples</h3>
-                        </p>
-                        <ul class="nav nav-tabs nav-tabs-examples">
-                          <li class="active"><a href="#examples-Subscribe-unBindControlData-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-Subscribe-unBindControlData-0-java">Java</a></li>
-                          <li class=""><a href="#examples-Subscribe-unBindControlData-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-Subscribe-unBindControlData-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-Subscribe-unBindControlData-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-Subscribe-unBindControlData-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Subscribe-unBindControlData-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-Subscribe-unBindControlData-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-Subscribe-unBindControlData-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-Subscribe-unBindControlData-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-Subscribe-unBindControlData-0-python">Python</a></li>
-                        </ul>
-
-                        <div class="tab-content">
-                          <div class="tab-pane active" id="examples-Subscribe-unBindControlData-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST -H "apikey: [[apiKey]]" "https://smartcity.rbccps.org/api/0.1.0/update/queue/unbind"</code></pre>
-                          </div>
-                          <div class="tab-pane" id="examples-Subscribe-unBindControlData-0-java">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
-import io.swagger.client.auth.*;
-import io.swagger.client.model.*;
-import io.swagger.client.api.SubscribeApi;
-
-import java.io.File;
-import java.util.*;
-
-public class SubscribeApiExample {
-
-    public static void main(String[] args) {
-        ApiClient defaultClient = Configuration.getDefaultApiClient();
-        
-        // Configure API key authorization: api_key
-        ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
-        api_key.setApiKey("YOUR API KEY");
-        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-        //api_key.setApiKeyPrefix("Token");
-
-        SubscribeApi apiInstance = new SubscribeApi();
-        Body_5 body = ; // Body_5 | Sensor ID (Binding Key) that needs to be un-binded
-        try {
-            apiInstance.unBindControlData(body);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling SubscribeApi#unBindControlData");
-            e.printStackTrace();
-        }
-    }
-}</code></pre>
-                          </div>
-
-                          <div class="tab-pane" id="examples-Subscribe-unBindControlData-0-android">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.SubscribeApi;
-
-public class SubscribeApiExample {
-
-    public static void main(String[] args) {
-        SubscribeApi apiInstance = new SubscribeApi();
-        Body_5 body = ; // Body_5 | Sensor ID (Binding Key) that needs to be un-binded
-        try {
-            apiInstance.unBindControlData(body);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling SubscribeApi#unBindControlData");
-            e.printStackTrace();
-        }
-    }
-}</code></pre>
-                          </div>
-  <!--
-  <div class="tab-pane" id="examples-Subscribe-unBindControlData-0-groovy">
-  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
-  </div> -->
-                            <div class="tab-pane" id="examples-Subscribe-unBindControlData-0-objc">
-                              <pre class="prettyprint"><code class="language-cpp">Configuration *apiConfig = [Configuration sharedConfig];
-
-// Configure API key authorization: (authentication scheme: api_key)
-[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"apikey"];
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"apikey"];
-
-Body_5 *body = ; // Sensor ID (Binding Key) that needs to be un-binded
-
-SubscribeApi *apiInstance = [[SubscribeApi alloc] init];
-
-// UnBind to a update topic in middleware
-[apiInstance unBindControlDataWith:body
-              completionHandler: ^(NSError* error) {
-                            if (error) {
-                                NSLog(@"Error: %@", error);
-                            }
-                        }];
-</code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-Subscribe-unBindControlData-0-javascript">
-                              <pre class="prettyprint"><code class="language-js">var SmartCityTestbed = require('smart_city_testbed');
-var defaultClient = SmartCityTestbed.ApiClient.instance;
-
-// Configure API key authorization: api_key
-var api_key = defaultClient.authentications['api_key'];
-api_key.apiKey = "YOUR API KEY"
-// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
-//api_key.apiKeyPrefix['apikey'] = "Token"
-
-var api = new SmartCityTestbed.SubscribeApi()
-
-var body = ; // {Body_5} Sensor ID (Binding Key) that needs to be un-binded
-
-
-var callback = function(error, data, response) {
-  if (error) {
-    console.error(error);
-  } else {
-    console.log('API called successfully.');
-  }
-};
-api.unBindControlData(body, callback);
-</code></pre>
-                            </div>
-
-                            <!--<div class="tab-pane" id="examples-Subscribe-unBindControlData-0-angular">
-              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
-            </div>-->
-                            <div class="tab-pane" id="examples-Subscribe-unBindControlData-0-csharp">
-                              <pre class="prettyprint"><code class="language-cs">using System;
-using System.Diagnostics;
-using IO.Swagger.Api;
-using IO.Swagger.Client;
-using IO.Swagger.Model;
-
-namespace Example
-{
-    public class unBindControlDataExample
-    {
-        public void main()
-        {
-            
-            // Configure API key authorization: api_key
-            Configuration.Default.ApiKey.Add("apikey", "YOUR_API_KEY");
-            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-            // Configuration.Default.ApiKeyPrefix.Add("apikey", "Bearer");
-
-            var apiInstance = new SubscribeApi();
-            var body = new Body_5(); // Body_5 | Sensor ID (Binding Key) that needs to be un-binded
-
-            try
-            {
-                // UnBind to a update topic in middleware
-                apiInstance.unBindControlData(body);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling SubscribeApi.unBindControlData: " + e.Message );
-            }
-        }
-    }
-}
-</code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-Subscribe-unBindControlData-0-php">
-                              <pre class="prettyprint"><code class="language-php"><&#63;php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: api_key
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('apikey', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('apikey', 'Bearer');
-
-$api_instance = new Swagger\Client\Api\SubscribeApi();
-$body = ; // Body_5 | Sensor ID (Binding Key) that needs to be un-binded
-
-try {
-    $api_instance->unBindControlData($body);
-} catch (Exception $e) {
-    echo 'Exception when calling SubscribeApi->unBindControlData: ', $e->getMessage(), PHP_EOL;
-}
-?></code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-Subscribe-unBindControlData-0-perl">
-                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
-use WWW::SwaggerClient::Configuration;
-use WWW::SwaggerClient::SubscribeApi;
-
-# Configure API key authorization: api_key
-$WWW::SwaggerClient::Configuration::api_key->{'apikey'} = 'YOUR_API_KEY';
-# uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-#$WWW::SwaggerClient::Configuration::api_key_prefix->{'apikey'} = "Bearer";
-
-my $api_instance = WWW::SwaggerClient::SubscribeApi->new();
-my $body = WWW::SwaggerClient::Object::Body_5->new(); # Body_5 | Sensor ID (Binding Key) that needs to be un-binded
-
-eval { 
-    $api_instance->unBindControlData(body => $body);
-};
-if ($@) {
-    warn "Exception when calling SubscribeApi->unBindControlData: $@\n";
-}</code></pre>
-                            </div>
-
-                            <div class="tab-pane" id="examples-Subscribe-unBindControlData-0-python">
-                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
-import time
-import swagger_client
-from swagger_client.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: api_key
-swagger_client.configuration.api_key['apikey'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# swagger_client.configuration.api_key_prefix['apikey'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = swagger_client.SubscribeApi()
-body =  # Body_5 | Sensor ID (Binding Key) that needs to be un-binded
-
-try: 
-    # UnBind to a update topic in middleware
-    api_instance.un_bind_control_data(body)
-except ApiException as e:
-    print("Exception when calling SubscribeApi->unBindControlData: %s\n" % e)</code></pre>
+    print("Exception when calling SubscribeApi->bindUpdate: %s\n" % e)</code></pre>
                             </div>
                           </div>
 
@@ -3555,10 +2652,10 @@ $(document).ready(function() {
   var schemaWrapper = {
   "in" : "body",
   "name" : "body",
-  "description" : "Sensor ID (Binding Key) that needs to be un-binded",
+  "description" : "Sensor ID (Binding Key) that needs to be added",
   "required" : true,
   "schema" : {
-    "$ref" : "#/definitions/body_5"
+    "$ref" : "#/definitions/body_4"
   }
 };
   var schema = schemaWrapper.schema;
@@ -3572,12 +2669,12 @@ $(document).ready(function() {
   }
 
   var view = new JSONSchemaView(schema,2,{isBodyParam: true});
-  var result = $('#d2e199_unBindControlData_body');
+  var result = $('#d2e199_bindUpdate_body');
   result.empty();
   result.append(view.render());
 });
 </script>
-<div id="d2e199_unBindControlData_body"></div>
+<div id="d2e199_bindUpdate_body"></div>
 </td>
 </tr>
 
@@ -3586,7 +2683,7 @@ $(document).ready(function() {
 
 
                           <h2>Responses</h2>
-                            <h3> Status: 200 - Unbind Success </h3>
+                            <h3> Status: 200 - Bind Success </h3>
 
                             <ul class="nav nav-tabs nav-tabs-examples" >
                             </ul>
@@ -3605,11 +2702,601 @@ $(document).ready(function() {
                         </article>
                       </div>
                       <hr>
-                    <div id="api-Subscribe-unBindLiveData">
-                      <article id="api-Subscribe-unBindLiveData-0" data-group="User" data-name="unBindLiveData" data-version="0">
+                    <div id="api-Subscribe-subscribeSensorData">
+                      <article id="api-Subscribe-subscribeSensorData-0" data-group="User" data-name="subscribeSensorData" data-version="0">
                         <div class="pull-left">
-                          <h1>unBindLiveData</h1>
-                          <p>UnBind to a sensor topic in middleware</p>
+                          <h1>subscribeSensorData</h1>
+                          <p>Used by Application to Subscribe for sensor information</p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked">To subscribe data from the middleware, use the API with the following parameters</p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/subscribe/data/queue</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-Subscribe-subscribeSensorData-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-Subscribe-subscribeSensorData-0-java">Java</a></li>
+                          <li class=""><a href="#examples-Subscribe-subscribeSensorData-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-Subscribe-subscribeSensorData-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-Subscribe-subscribeSensorData-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-Subscribe-subscribeSensorData-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-Subscribe-subscribeSensorData-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Subscribe-subscribeSensorData-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-Subscribe-subscribeSensorData-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-Subscribe-subscribeSensorData-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Subscribe-subscribeSensorData-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-Subscribe-subscribeSensorData-0-curl">
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET -H "apikey: [[apiKey]]" "https://smartcity.rbccps.org/api/0.1.0/subscribe/data/queue?name="</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-Subscribe-subscribeSensorData-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.SubscribeApi;
+
+import java.io.File;
+import java.util.*;
+
+public class SubscribeApiExample {
+
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        
+        // Configure API key authorization: api_key
+        ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+        api_key.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //api_key.setApiKeyPrefix("Token");
+
+        SubscribeApi apiInstance = new SubscribeApi();
+        String name = name_example; // String | The queue name to subscribe.
+        try {
+            apiInstance.subscribeSensorData(name);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling SubscribeApi#subscribeSensorData");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-Subscribe-subscribeSensorData-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.SubscribeApi;
+
+public class SubscribeApiExample {
+
+    public static void main(String[] args) {
+        SubscribeApi apiInstance = new SubscribeApi();
+        String name = name_example; // String | The queue name to subscribe.
+        try {
+            apiInstance.subscribeSensorData(name);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling SubscribeApi#subscribeSensorData");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-Subscribe-subscribeSensorData-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-Subscribe-subscribeSensorData-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">Configuration *apiConfig = [Configuration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: api_key)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"apikey"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"apikey"];
+
+String *name = name_example; // The queue name to subscribe. (optional)
+
+SubscribeApi *apiInstance = [[SubscribeApi alloc] init];
+
+// Used by Application to Subscribe for sensor information
+[apiInstance subscribeSensorDataWith:name
+              completionHandler: ^(NSError* error) {
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Subscribe-subscribeSensorData-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var SmartCityTestbed = require('smart_city_testbed');
+var defaultClient = SmartCityTestbed.ApiClient.instance;
+
+// Configure API key authorization: api_key
+var api_key = defaultClient.authentications['api_key'];
+api_key.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.apiKeyPrefix['apikey'] = "Token"
+
+var api = new SmartCityTestbed.SubscribeApi()
+
+var opts = { 
+  'name': name_example // {String} The queue name to subscribe.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+api.subscribeSensorData(opts, callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-Subscribe-subscribeSensorData-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-Subscribe-subscribeSensorData-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class subscribeSensorDataExample
+    {
+        public void main()
+        {
+            
+            // Configure API key authorization: api_key
+            Configuration.Default.ApiKey.Add("apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("apikey", "Bearer");
+
+            var apiInstance = new SubscribeApi();
+            var name = name_example;  // String | The queue name to subscribe. (optional) 
+
+            try
+            {
+                // Used by Application to Subscribe for sensor information
+                apiInstance.subscribeSensorData(name);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SubscribeApi.subscribeSensorData: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Subscribe-subscribeSensorData-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('apikey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('apikey', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\SubscribeApi();
+$name = name_example; // String | The queue name to subscribe.
+
+try {
+    $api_instance->subscribeSensorData($name);
+} catch (Exception $e) {
+    echo 'Exception when calling SubscribeApi->subscribeSensorData: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Subscribe-subscribeSensorData-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::SubscribeApi;
+
+# Configure API key authorization: api_key
+$WWW::SwaggerClient::Configuration::api_key->{'apikey'} = 'YOUR_API_KEY';
+# uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+#$WWW::SwaggerClient::Configuration::api_key_prefix->{'apikey'} = "Bearer";
+
+my $api_instance = WWW::SwaggerClient::SubscribeApi->new();
+my $name = name_example; # String | The queue name to subscribe.
+
+eval { 
+    $api_instance->subscribeSensorData(name => $name);
+};
+if ($@) {
+    warn "Exception when calling SubscribeApi->subscribeSensorData: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Subscribe-subscribeSensorData-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: api_key
+swagger_client.configuration.api_key['apikey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# swagger_client.configuration.api_key_prefix['apikey'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = swagger_client.SubscribeApi()
+name = name_example # String | The queue name to subscribe. (optional)
+
+try: 
+    # Used by Application to Subscribe for sensor information
+    api_instance.subscribe_sensor_data(name=name)
+except ApiException as e:
+    print("Exception when calling SubscribeApi->subscribeSensorData: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+
+
+
+
+                            <div class="methodsubtabletitle">Query parameters</div>
+                            <table id="methodsubtable">
+                              <tr>
+                                <th width="150px">Name</th>
+                                <th>Description</th>
+                              </tr>
+                                <tr><td style="width:150px;">name</td>
+<td>
+
+
+    <div id="d2e199_subscribeSensorData_name">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+                    <div class="inner description">
+                        The queue name to subscribe.
+                    </div>
+            </div>
+        </div>
+    </div>
+</td>
+</tr>
+
+                            </table>
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - Data received by the Broker </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                            <h3> Status: 405 - Invalid input </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
+                    <div id="api-Subscribe-subscribeUpdate">
+                      <article id="api-Subscribe-subscribeUpdate-0" data-group="User" data-name="subscribeUpdate" data-version="0">
+                        <div class="pull-left">
+                          <h1>subscribeUpdate</h1>
+                          <p>Used by Device to Subscribe for update information</p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked">To subscribe control data from the middleware, use the API with the following parameters</p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/subscribe/update/queue</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-Subscribe-subscribeUpdate-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-Subscribe-subscribeUpdate-0-java">Java</a></li>
+                          <li class=""><a href="#examples-Subscribe-subscribeUpdate-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-Subscribe-subscribeUpdate-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-Subscribe-subscribeUpdate-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-Subscribe-subscribeUpdate-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-Subscribe-subscribeUpdate-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Subscribe-subscribeUpdate-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-Subscribe-subscribeUpdate-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-Subscribe-subscribeUpdate-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Subscribe-subscribeUpdate-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-Subscribe-subscribeUpdate-0-curl">
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET -H "apikey: [[apiKey]]" "https://smartcity.rbccps.org/api/0.1.0/subscribe/update/queue?name="</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-Subscribe-subscribeUpdate-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.SubscribeApi;
+
+import java.io.File;
+import java.util.*;
+
+public class SubscribeApiExample {
+
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        
+        // Configure API key authorization: api_key
+        ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+        api_key.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //api_key.setApiKeyPrefix("Token");
+
+        SubscribeApi apiInstance = new SubscribeApi();
+        String name = name_example; // String | The queue name to subscribe.
+        try {
+            apiInstance.subscribeUpdate(name);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling SubscribeApi#subscribeUpdate");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-Subscribe-subscribeUpdate-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.SubscribeApi;
+
+public class SubscribeApiExample {
+
+    public static void main(String[] args) {
+        SubscribeApi apiInstance = new SubscribeApi();
+        String name = name_example; // String | The queue name to subscribe.
+        try {
+            apiInstance.subscribeUpdate(name);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling SubscribeApi#subscribeUpdate");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-Subscribe-subscribeUpdate-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-Subscribe-subscribeUpdate-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">Configuration *apiConfig = [Configuration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: api_key)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"apikey"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"apikey"];
+
+String *name = name_example; // The queue name to subscribe. (optional)
+
+SubscribeApi *apiInstance = [[SubscribeApi alloc] init];
+
+// Used by Device to Subscribe for update information
+[apiInstance subscribeUpdateWith:name
+              completionHandler: ^(NSError* error) {
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Subscribe-subscribeUpdate-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var SmartCityTestbed = require('smart_city_testbed');
+var defaultClient = SmartCityTestbed.ApiClient.instance;
+
+// Configure API key authorization: api_key
+var api_key = defaultClient.authentications['api_key'];
+api_key.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.apiKeyPrefix['apikey'] = "Token"
+
+var api = new SmartCityTestbed.SubscribeApi()
+
+var opts = { 
+  'name': name_example // {String} The queue name to subscribe.
+};
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+api.subscribeUpdate(opts, callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-Subscribe-subscribeUpdate-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-Subscribe-subscribeUpdate-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class subscribeUpdateExample
+    {
+        public void main()
+        {
+            
+            // Configure API key authorization: api_key
+            Configuration.Default.ApiKey.Add("apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("apikey", "Bearer");
+
+            var apiInstance = new SubscribeApi();
+            var name = name_example;  // String | The queue name to subscribe. (optional) 
+
+            try
+            {
+                // Used by Device to Subscribe for update information
+                apiInstance.subscribeUpdate(name);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SubscribeApi.subscribeUpdate: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Subscribe-subscribeUpdate-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('apikey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('apikey', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\SubscribeApi();
+$name = name_example; // String | The queue name to subscribe.
+
+try {
+    $api_instance->subscribeUpdate($name);
+} catch (Exception $e) {
+    echo 'Exception when calling SubscribeApi->subscribeUpdate: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Subscribe-subscribeUpdate-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::SubscribeApi;
+
+# Configure API key authorization: api_key
+$WWW::SwaggerClient::Configuration::api_key->{'apikey'} = 'YOUR_API_KEY';
+# uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+#$WWW::SwaggerClient::Configuration::api_key_prefix->{'apikey'} = "Bearer";
+
+my $api_instance = WWW::SwaggerClient::SubscribeApi->new();
+my $name = name_example; # String | The queue name to subscribe.
+
+eval { 
+    $api_instance->subscribeUpdate(name => $name);
+};
+if ($@) {
+    warn "Exception when calling SubscribeApi->subscribeUpdate: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Subscribe-subscribeUpdate-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: api_key
+swagger_client.configuration.api_key['apikey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# swagger_client.configuration.api_key_prefix['apikey'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = swagger_client.SubscribeApi()
+name = name_example # String | The queue name to subscribe. (optional)
+
+try: 
+    # Used by Device to Subscribe for update information
+    api_instance.subscribe_update(name=name)
+except ApiException as e:
+    print("Exception when calling SubscribeApi->subscribeUpdate: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+
+
+
+
+                            <div class="methodsubtabletitle">Query parameters</div>
+                            <table id="methodsubtable">
+                              <tr>
+                                <th width="150px">Name</th>
+                                <th>Description</th>
+                              </tr>
+                                <tr><td style="width:150px;">name</td>
+<td>
+
+
+    <div id="d2e199_subscribeUpdate_name">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+                    <div class="inner description">
+                        The queue name to subscribe.
+                    </div>
+            </div>
+        </div>
+    </div>
+</td>
+</tr>
+
+                            </table>
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - Data received by the Broker </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                            <h3> Status: 405 - Invalid input </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
+                    <div id="api-Subscribe-unBindSensor">
+                      <article id="api-Subscribe-unBindSensor-0" data-group="User" data-name="unBindSensor" data-version="0">
+                        <div class="pull-left">
+                          <h1>unBindSensor</h1>
+                          <p>Used by Application to UnBind to a sensor topic in middleware</p>
                         </div>
                         <div class="pull-right"></div>
                         <div class="clearfix"></div>
@@ -3617,29 +3304,29 @@ $(document).ready(function() {
                         <p class="marked">To unbind from a published data in the middleware, use the API with the following parameters in the body.</p>
                         <p></p>
                         <br />
-                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/stream/queue/unbind</span></code></pre>
+                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/subscribe/data/queue/unbind</span></code></pre>
                         <p>
                           <h3>Usage and SDK Samples</h3>
                         </p>
                         <ul class="nav nav-tabs nav-tabs-examples">
-                          <li class="active"><a href="#examples-Subscribe-unBindLiveData-0-curl">Curl</a></li>
-                          <li class=""><a href="#examples-Subscribe-unBindLiveData-0-java">Java</a></li>
-                          <li class=""><a href="#examples-Subscribe-unBindLiveData-0-android">Android</a></li>
-                          <!--<li class=""><a href="#examples-Subscribe-unBindLiveData-0-groovy">Groovy</a></li>-->
-                          <li class=""><a href="#examples-Subscribe-unBindLiveData-0-objc">Obj-C</a></li>
-                          <li class=""><a href="#examples-Subscribe-unBindLiveData-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Subscribe-unBindLiveData-0-angular">Angular</a></li>-->
-                          <li class=""><a href="#examples-Subscribe-unBindLiveData-0-csharp">C#</a></li>
-                          <li class=""><a href="#examples-Subscribe-unBindLiveData-0-php">PHP</a></li>
-                          <li class=""><a href="#examples-Subscribe-unBindLiveData-0-perl">Perl</a></li>
-                          <li class=""><a href="#examples-Subscribe-unBindLiveData-0-python">Python</a></li>
+                          <li class="active"><a href="#examples-Subscribe-unBindSensor-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-Subscribe-unBindSensor-0-java">Java</a></li>
+                          <li class=""><a href="#examples-Subscribe-unBindSensor-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-Subscribe-unBindSensor-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-Subscribe-unBindSensor-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-Subscribe-unBindSensor-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-Subscribe-unBindSensor-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Subscribe-unBindSensor-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-Subscribe-unBindSensor-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-Subscribe-unBindSensor-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Subscribe-unBindSensor-0-python">Python</a></li>
                         </ul>
 
                         <div class="tab-content">
-                          <div class="tab-pane active" id="examples-Subscribe-unBindLiveData-0-curl">
-                            <pre class="prettyprint"><code class="language-bsh">curl -X POST -H "apikey: [[apiKey]]" "https://smartcity.rbccps.org/api/0.1.0/stream/queue/unbind"</code></pre>
+                          <div class="tab-pane active" id="examples-Subscribe-unBindSensor-0-curl">
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST -H "apikey: [[apiKey]]" "https://smartcity.rbccps.org/api/0.1.0/subscribe/data/queue/unbind"</code></pre>
                           </div>
-                          <div class="tab-pane" id="examples-Subscribe-unBindLiveData-0-java">
+                          <div class="tab-pane" id="examples-Subscribe-unBindSensor-0-java">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
 import io.swagger.client.auth.*;
 import io.swagger.client.model.*;
@@ -3662,16 +3349,16 @@ public class SubscribeApiExample {
         SubscribeApi apiInstance = new SubscribeApi();
         Body_3 body = ; // Body_3 | Sensor ID (Binding Key) that needs to be un-binded
         try {
-            apiInstance.unBindLiveData(body);
+            apiInstance.unBindSensor(body);
         } catch (ApiException e) {
-            System.err.println("Exception when calling SubscribeApi#unBindLiveData");
+            System.err.println("Exception when calling SubscribeApi#unBindSensor");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
 
-                          <div class="tab-pane" id="examples-Subscribe-unBindLiveData-0-android">
+                          <div class="tab-pane" id="examples-Subscribe-unBindSensor-0-android">
                             <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.SubscribeApi;
 
 public class SubscribeApiExample {
@@ -3680,19 +3367,19 @@ public class SubscribeApiExample {
         SubscribeApi apiInstance = new SubscribeApi();
         Body_3 body = ; // Body_3 | Sensor ID (Binding Key) that needs to be un-binded
         try {
-            apiInstance.unBindLiveData(body);
+            apiInstance.unBindSensor(body);
         } catch (ApiException e) {
-            System.err.println("Exception when calling SubscribeApi#unBindLiveData");
+            System.err.println("Exception when calling SubscribeApi#unBindSensor");
             e.printStackTrace();
         }
     }
 }</code></pre>
                           </div>
   <!--
-  <div class="tab-pane" id="examples-Subscribe-unBindLiveData-0-groovy">
+  <div class="tab-pane" id="examples-Subscribe-unBindSensor-0-groovy">
   <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
   </div> -->
-                            <div class="tab-pane" id="examples-Subscribe-unBindLiveData-0-objc">
+                            <div class="tab-pane" id="examples-Subscribe-unBindSensor-0-objc">
                               <pre class="prettyprint"><code class="language-cpp">Configuration *apiConfig = [Configuration sharedConfig];
 
 // Configure API key authorization: (authentication scheme: api_key)
@@ -3704,8 +3391,8 @@ Body_3 *body = ; // Sensor ID (Binding Key) that needs to be un-binded
 
 SubscribeApi *apiInstance = [[SubscribeApi alloc] init];
 
-// UnBind to a sensor topic in middleware
-[apiInstance unBindLiveDataWith:body
+// Used by Application to UnBind to a sensor topic in middleware
+[apiInstance unBindSensorWith:body
               completionHandler: ^(NSError* error) {
                             if (error) {
                                 NSLog(@"Error: %@", error);
@@ -3714,7 +3401,7 @@ SubscribeApi *apiInstance = [[SubscribeApi alloc] init];
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Subscribe-unBindLiveData-0-javascript">
+                            <div class="tab-pane" id="examples-Subscribe-unBindSensor-0-javascript">
                               <pre class="prettyprint"><code class="language-js">var SmartCityTestbed = require('smart_city_testbed');
 var defaultClient = SmartCityTestbed.ApiClient.instance;
 
@@ -3736,14 +3423,14 @@ var callback = function(error, data, response) {
     console.log('API called successfully.');
   }
 };
-api.unBindLiveData(body, callback);
+api.unBindSensor(body, callback);
 </code></pre>
                             </div>
 
-                            <!--<div class="tab-pane" id="examples-Subscribe-unBindLiveData-0-angular">
+                            <!--<div class="tab-pane" id="examples-Subscribe-unBindSensor-0-angular">
               <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
             </div>-->
-                            <div class="tab-pane" id="examples-Subscribe-unBindLiveData-0-csharp">
+                            <div class="tab-pane" id="examples-Subscribe-unBindSensor-0-csharp">
                               <pre class="prettyprint"><code class="language-cs">using System;
 using System.Diagnostics;
 using IO.Swagger.Api;
@@ -3752,7 +3439,7 @@ using IO.Swagger.Model;
 
 namespace Example
 {
-    public class unBindLiveDataExample
+    public class unBindSensorExample
     {
         public void main()
         {
@@ -3767,12 +3454,12 @@ namespace Example
 
             try
             {
-                // UnBind to a sensor topic in middleware
-                apiInstance.unBindLiveData(body);
+                // Used by Application to UnBind to a sensor topic in middleware
+                apiInstance.unBindSensor(body);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling SubscribeApi.unBindLiveData: " + e.Message );
+                Debug.Print("Exception when calling SubscribeApi.unBindSensor: " + e.Message );
             }
         }
     }
@@ -3780,7 +3467,7 @@ namespace Example
 </code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Subscribe-unBindLiveData-0-php">
+                            <div class="tab-pane" id="examples-Subscribe-unBindSensor-0-php">
                               <pre class="prettyprint"><code class="language-php"><&#63;php
 require_once(__DIR__ . '/vendor/autoload.php');
 
@@ -3793,14 +3480,14 @@ $api_instance = new Swagger\Client\Api\SubscribeApi();
 $body = ; // Body_3 | Sensor ID (Binding Key) that needs to be un-binded
 
 try {
-    $api_instance->unBindLiveData($body);
+    $api_instance->unBindSensor($body);
 } catch (Exception $e) {
-    echo 'Exception when calling SubscribeApi->unBindLiveData: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SubscribeApi->unBindSensor: ', $e->getMessage(), PHP_EOL;
 }
 ?></code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Subscribe-unBindLiveData-0-perl">
+                            <div class="tab-pane" id="examples-Subscribe-unBindSensor-0-perl">
                               <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
 use WWW::SwaggerClient::Configuration;
 use WWW::SwaggerClient::SubscribeApi;
@@ -3814,14 +3501,14 @@ my $api_instance = WWW::SwaggerClient::SubscribeApi->new();
 my $body = WWW::SwaggerClient::Object::Body_3->new(); # Body_3 | Sensor ID (Binding Key) that needs to be un-binded
 
 eval { 
-    $api_instance->unBindLiveData(body => $body);
+    $api_instance->unBindSensor(body => $body);
 };
 if ($@) {
-    warn "Exception when calling SubscribeApi->unBindLiveData: $@\n";
+    warn "Exception when calling SubscribeApi->unBindSensor: $@\n";
 }</code></pre>
                             </div>
 
-                            <div class="tab-pane" id="examples-Subscribe-unBindLiveData-0-python">
+                            <div class="tab-pane" id="examples-Subscribe-unBindSensor-0-python">
                               <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
 import time
 import swagger_client
@@ -3838,10 +3525,10 @@ api_instance = swagger_client.SubscribeApi()
 body =  # Body_3 | Sensor ID (Binding Key) that needs to be un-binded
 
 try: 
-    # UnBind to a sensor topic in middleware
-    api_instance.un_bind_live_data(body)
+    # Used by Application to UnBind to a sensor topic in middleware
+    api_instance.un_bind_sensor(body)
 except ApiException as e:
-    print("Exception when calling SubscribeApi->unBindLiveData: %s\n" % e)</code></pre>
+    print("Exception when calling SubscribeApi->unBindSensor: %s\n" % e)</code></pre>
                             </div>
                           </div>
 
@@ -3881,12 +3568,321 @@ $(document).ready(function() {
   }
 
   var view = new JSONSchemaView(schema,2,{isBodyParam: true});
-  var result = $('#d2e199_unBindLiveData_body');
+  var result = $('#d2e199_unBindSensor_body');
   result.empty();
   result.append(view.render());
 });
 </script>
-<div id="d2e199_unBindLiveData_body"></div>
+<div id="d2e199_unBindSensor_body"></div>
+</td>
+</tr>
+
+                            </table>
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - Unbind Success </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                            <h3> Status: 405 - Invalid input </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
+                    <div id="api-Subscribe-unBindUpdate">
+                      <article id="api-Subscribe-unBindUpdate-0" data-group="User" data-name="unBindUpdate" data-version="0">
+                        <div class="pull-left">
+                          <h1>unBindUpdate</h1>
+                          <p>Used by Device to UnBind to a update topic in middleware</p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked">To unbind from a published control data in the middleware, use the API with the following parameters in the body.</p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="post"><code><span class="pln">/subscribe/update/queue/unbind</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-Subscribe-unBindUpdate-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-Subscribe-unBindUpdate-0-java">Java</a></li>
+                          <li class=""><a href="#examples-Subscribe-unBindUpdate-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-Subscribe-unBindUpdate-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-Subscribe-unBindUpdate-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-Subscribe-unBindUpdate-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-Subscribe-unBindUpdate-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Subscribe-unBindUpdate-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-Subscribe-unBindUpdate-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-Subscribe-unBindUpdate-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Subscribe-unBindUpdate-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-Subscribe-unBindUpdate-0-curl">
+                            <pre class="prettyprint"><code class="language-bsh">curl -X POST -H "apikey: [[apiKey]]" "https://smartcity.rbccps.org/api/0.1.0/subscribe/update/queue/unbind"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-Subscribe-unBindUpdate-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.SubscribeApi;
+
+import java.io.File;
+import java.util.*;
+
+public class SubscribeApiExample {
+
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        
+        // Configure API key authorization: api_key
+        ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+        api_key.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //api_key.setApiKeyPrefix("Token");
+
+        SubscribeApi apiInstance = new SubscribeApi();
+        Body_5 body = ; // Body_5 | Sensor ID (Binding Key) that needs to be un-binded
+        try {
+            apiInstance.unBindUpdate(body);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling SubscribeApi#unBindUpdate");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-Subscribe-unBindUpdate-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.SubscribeApi;
+
+public class SubscribeApiExample {
+
+    public static void main(String[] args) {
+        SubscribeApi apiInstance = new SubscribeApi();
+        Body_5 body = ; // Body_5 | Sensor ID (Binding Key) that needs to be un-binded
+        try {
+            apiInstance.unBindUpdate(body);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling SubscribeApi#unBindUpdate");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-Subscribe-unBindUpdate-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-Subscribe-unBindUpdate-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">Configuration *apiConfig = [Configuration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: api_key)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"apikey"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"apikey"];
+
+Body_5 *body = ; // Sensor ID (Binding Key) that needs to be un-binded
+
+SubscribeApi *apiInstance = [[SubscribeApi alloc] init];
+
+// Used by Device to UnBind to a update topic in middleware
+[apiInstance unBindUpdateWith:body
+              completionHandler: ^(NSError* error) {
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Subscribe-unBindUpdate-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var SmartCityTestbed = require('smart_city_testbed');
+var defaultClient = SmartCityTestbed.ApiClient.instance;
+
+// Configure API key authorization: api_key
+var api_key = defaultClient.authentications['api_key'];
+api_key.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.apiKeyPrefix['apikey'] = "Token"
+
+var api = new SmartCityTestbed.SubscribeApi()
+
+var body = ; // {Body_5} Sensor ID (Binding Key) that needs to be un-binded
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+api.unBindUpdate(body, callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-Subscribe-unBindUpdate-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-Subscribe-unBindUpdate-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class unBindUpdateExample
+    {
+        public void main()
+        {
+            
+            // Configure API key authorization: api_key
+            Configuration.Default.ApiKey.Add("apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("apikey", "Bearer");
+
+            var apiInstance = new SubscribeApi();
+            var body = new Body_5(); // Body_5 | Sensor ID (Binding Key) that needs to be un-binded
+
+            try
+            {
+                // Used by Device to UnBind to a update topic in middleware
+                apiInstance.unBindUpdate(body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SubscribeApi.unBindUpdate: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Subscribe-unBindUpdate-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('apikey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('apikey', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\SubscribeApi();
+$body = ; // Body_5 | Sensor ID (Binding Key) that needs to be un-binded
+
+try {
+    $api_instance->unBindUpdate($body);
+} catch (Exception $e) {
+    echo 'Exception when calling SubscribeApi->unBindUpdate: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Subscribe-unBindUpdate-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::SubscribeApi;
+
+# Configure API key authorization: api_key
+$WWW::SwaggerClient::Configuration::api_key->{'apikey'} = 'YOUR_API_KEY';
+# uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+#$WWW::SwaggerClient::Configuration::api_key_prefix->{'apikey'} = "Bearer";
+
+my $api_instance = WWW::SwaggerClient::SubscribeApi->new();
+my $body = WWW::SwaggerClient::Object::Body_5->new(); # Body_5 | Sensor ID (Binding Key) that needs to be un-binded
+
+eval { 
+    $api_instance->unBindUpdate(body => $body);
+};
+if ($@) {
+    warn "Exception when calling SubscribeApi->unBindUpdate: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Subscribe-unBindUpdate-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: api_key
+swagger_client.configuration.api_key['apikey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# swagger_client.configuration.api_key_prefix['apikey'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = swagger_client.SubscribeApi()
+body =  # Body_5 | Sensor ID (Binding Key) that needs to be un-binded
+
+try: 
+    # Used by Device to UnBind to a update topic in middleware
+    api_instance.un_bind_update(body)
+except ApiException as e:
+    print("Exception when calling SubscribeApi->unBindUpdate: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+
+
+                            <div class="methodsubtabletitle">Body parameters</div>
+                            <table id="methodsubtable">
+                              <tr>
+                                <th width="150px">Name</th>
+                                <th>Description</th>
+                              </tr>
+                                <tr><td style="width:150px;">body <span style="color:red;">*</span></td>
+<td>
+
+
+<script>
+$(document).ready(function() {
+  var schemaWrapper = {
+  "in" : "body",
+  "name" : "body",
+  "description" : "Sensor ID (Binding Key) that needs to be un-binded",
+  "required" : true,
+  "schema" : {
+    "$ref" : "#/definitions/body_5"
+  }
+};
+  var schema = schemaWrapper.schema;
+  if (schema.$ref != null) {
+    schema = defsParser.$refs.get(schema.$ref);
+  } else {
+    schemaWrapper.definitions = Object.assign({}, defs);
+    $RefParser.dereference(schemaWrapper).catch(function(err) {
+      console.log(err);
+    });
+  }
+
+  var view = new JSONSchemaView(schema,2,{isBodyParam: true});
+  var result = $('#d2e199_unBindUpdate_body');
+  result.empty();
+  result.append(view.render());
+});
+</script>
+<div id="d2e199_unBindUpdate_body"></div>
 </td>
 </tr>
 
@@ -3927,7 +3923,7 @@ $(document).ready(function() {
           </div>
           <div id="generator">
             <div class="content">
-              Generated 2017-08-23T14:45:24.544Z
+              Generated 2017-08-24T04:41:33.551Z
             </div>
           </div>
       </div>
