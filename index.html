@@ -895,6 +895,10 @@ margin-bottom: 20px;
                     <li data-group="Publish" data-name="publishUpdate" class="">
                       <a href="#api-Publish-publishUpdate">publishUpdate</a>
                     </li>
+                  <li class="nav-header" data-group="Register"><a href="#api-Register">API Methods - Register</a></li>
+                    <li data-group="Register" data-name="register" class="">
+                      <a href="#api-Register-register">register</a>
+                    </li>
                   <li class="nav-header" data-group="Subscribe"><a href="#api-Subscribe">API Methods - Subscribe</a></li>
                     <li data-group="Subscribe" data-name="bindSensor" class="">
                       <a href="#api-Subscribe-bindSensor">bindSensor</a>
@@ -2063,6 +2067,339 @@ $(document).ready(function() {
 
                           <h2>Responses</h2>
                             <h3> Status: 200 - Data received by the Broker </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                            <h3> Status: 405 - Invalid input </h3>
+
+                            <ul class="nav nav-tabs nav-tabs-examples" >
+                            </ul>
+
+                            <div class="tab-content" style='margin-bottom: 10px;'>
+                            </div>
+
+                        </article>
+                      </div>
+                      <hr>
+                  </section>
+                <section id="api-Register">
+                  <h1>Register</h1>
+                    <div id="api-Register-register">
+                      <article id="api-Register-register-0" data-group="User" data-name="register" data-version="0">
+                        <div class="pull-left">
+                          <h1>register</h1>
+                          <p>Used by Provider to Onboard / Register devices or applications</p>
+                        </div>
+                        <div class="pull-right"></div>
+                        <div class="clearfix"></div>
+                        <p></p>
+                        <p class="marked">To register devices / applications with the middleware, use the API with the following parameters</p>
+                        <p></p>
+                        <br />
+                        <pre class="prettyprint language-html prettyprinted" data-type="get"><code><span class="pln">/register</span></code></pre>
+                        <p>
+                          <h3>Usage and SDK Samples</h3>
+                        </p>
+                        <ul class="nav nav-tabs nav-tabs-examples">
+                          <li class="active"><a href="#examples-Register-register-0-curl">Curl</a></li>
+                          <li class=""><a href="#examples-Register-register-0-java">Java</a></li>
+                          <li class=""><a href="#examples-Register-register-0-android">Android</a></li>
+                          <!--<li class=""><a href="#examples-Register-register-0-groovy">Groovy</a></li>-->
+                          <li class=""><a href="#examples-Register-register-0-objc">Obj-C</a></li>
+                          <li class=""><a href="#examples-Register-register-0-javascript">JavaScript</a></li>
+                          <!--<li class=""><a href="#examples-Register-register-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Register-register-0-csharp">C#</a></li>
+                          <li class=""><a href="#examples-Register-register-0-php">PHP</a></li>
+                          <li class=""><a href="#examples-Register-register-0-perl">Perl</a></li>
+                          <li class=""><a href="#examples-Register-register-0-python">Python</a></li>
+                        </ul>
+
+                        <div class="tab-content">
+                          <div class="tab-pane active" id="examples-Register-register-0-curl">
+                            <pre class="prettyprint"><code class="language-bsh">curl -X GET -H "apikey: [[apiKey]]" "https://smartcity.rbccps.org/api/0.1.0/register"</code></pre>
+                          </div>
+                          <div class="tab-pane" id="examples-Register-register-0-java">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.*;
+import io.swagger.client.auth.*;
+import io.swagger.client.model.*;
+import io.swagger.client.api.RegisterApi;
+
+import java.io.File;
+import java.util.*;
+
+public class RegisterApiExample {
+
+    public static void main(String[] args) {
+        ApiClient defaultClient = Configuration.getDefaultApiClient();
+        
+        // Configure API key authorization: api_key
+        ApiKeyAuth api_key = (ApiKeyAuth) defaultClient.getAuthentication("api_key");
+        api_key.setApiKey("YOUR API KEY");
+        // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+        //api_key.setApiKeyPrefix("Token");
+
+        RegisterApi apiInstance = new RegisterApi();
+        String resourceID = resourceID_example; // String | The ID for the device / application. This should be unique within the instance of the middleware.
+        String serviceType = serviceType_example; // String | The services to be used by the device / application. One or all of (publish,subscribe,historicData)
+        try {
+            apiInstance.register(resourceID, serviceType);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling RegisterApi#register");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+
+                          <div class="tab-pane" id="examples-Register-register-0-android">
+                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.RegisterApi;
+
+public class RegisterApiExample {
+
+    public static void main(String[] args) {
+        RegisterApi apiInstance = new RegisterApi();
+        String resourceID = resourceID_example; // String | The ID for the device / application. This should be unique within the instance of the middleware.
+        String serviceType = serviceType_example; // String | The services to be used by the device / application. One or all of (publish,subscribe,historicData)
+        try {
+            apiInstance.register(resourceID, serviceType);
+        } catch (ApiException e) {
+            System.err.println("Exception when calling RegisterApi#register");
+            e.printStackTrace();
+        }
+    }
+}</code></pre>
+                          </div>
+  <!--
+  <div class="tab-pane" id="examples-Register-register-0-groovy">
+  <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+  </div> -->
+                            <div class="tab-pane" id="examples-Register-register-0-objc">
+                              <pre class="prettyprint"><code class="language-cpp">Configuration *apiConfig = [Configuration sharedConfig];
+
+// Configure API key authorization: (authentication scheme: api_key)
+[apiConfig setApiKey:@"YOUR_API_KEY" forApiKeyIdentifier:@"apikey"];
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+//[apiConfig setApiKeyPrefix:@"Bearer" forApiKeyIdentifier:@"apikey"];
+
+String *resourceID = resourceID_example; // The ID for the device / application. This should be unique within the instance of the middleware.
+String *serviceType = serviceType_example; // The services to be used by the device / application. One or all of (publish,subscribe,historicData)
+
+RegisterApi *apiInstance = [[RegisterApi alloc] init];
+
+// Used by Provider to Onboard / Register devices or applications
+[apiInstance registerWith:resourceID
+    serviceType:serviceType
+              completionHandler: ^(NSError* error) {
+                            if (error) {
+                                NSLog(@"Error: %@", error);
+                            }
+                        }];
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Register-register-0-javascript">
+                              <pre class="prettyprint"><code class="language-js">var SmartCityTestbed = require('smart_city_testbed');
+var defaultClient = SmartCityTestbed.ApiClient.instance;
+
+// Configure API key authorization: api_key
+var api_key = defaultClient.authentications['api_key'];
+api_key.apiKey = "YOUR API KEY"
+// Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+//api_key.apiKeyPrefix['apikey'] = "Token"
+
+var api = new SmartCityTestbed.RegisterApi()
+
+var resourceID = resourceID_example; // {String} The ID for the device / application. This should be unique within the instance of the middleware.
+
+var serviceType = serviceType_example; // {String} The services to be used by the device / application. One or all of (publish,subscribe,historicData)
+
+
+var callback = function(error, data, response) {
+  if (error) {
+    console.error(error);
+  } else {
+    console.log('API called successfully.');
+  }
+};
+api.register(resourceID, serviceType, callback);
+</code></pre>
+                            </div>
+
+                            <!--<div class="tab-pane" id="examples-Register-register-0-angular">
+              <pre class="prettyprint language-json prettyprinted" data-type="json"><code>Coming Soon!</code></pre>
+            </div>-->
+                            <div class="tab-pane" id="examples-Register-register-0-csharp">
+                              <pre class="prettyprint"><code class="language-cs">using System;
+using System.Diagnostics;
+using IO.Swagger.Api;
+using IO.Swagger.Client;
+using IO.Swagger.Model;
+
+namespace Example
+{
+    public class registerExample
+    {
+        public void main()
+        {
+            
+            // Configure API key authorization: api_key
+            Configuration.Default.ApiKey.Add("apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("apikey", "Bearer");
+
+            var apiInstance = new RegisterApi();
+            var resourceID = resourceID_example;  // String | The ID for the device / application. This should be unique within the instance of the middleware.
+            var serviceType = serviceType_example;  // String | The services to be used by the device / application. One or all of (publish,subscribe,historicData)
+
+            try
+            {
+                // Used by Provider to Onboard / Register devices or applications
+                apiInstance.register(resourceID, serviceType);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RegisterApi.register: " + e.Message );
+            }
+        }
+    }
+}
+</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Register-register-0-php">
+                              <pre class="prettyprint"><code class="language-php"><&#63;php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: api_key
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('apikey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('apikey', 'Bearer');
+
+$api_instance = new Swagger\Client\Api\RegisterApi();
+$resourceID = resourceID_example; // String | The ID for the device / application. This should be unique within the instance of the middleware.
+$serviceType = serviceType_example; // String | The services to be used by the device / application. One or all of (publish,subscribe,historicData)
+
+try {
+    $api_instance->register($resourceID, $serviceType);
+} catch (Exception $e) {
+    echo 'Exception when calling RegisterApi->register: ', $e->getMessage(), PHP_EOL;
+}
+?></code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Register-register-0-perl">
+                              <pre class="prettyprint"><code class="language-perl">use Data::Dumper;
+use WWW::SwaggerClient::Configuration;
+use WWW::SwaggerClient::RegisterApi;
+
+# Configure API key authorization: api_key
+$WWW::SwaggerClient::Configuration::api_key->{'apikey'} = 'YOUR_API_KEY';
+# uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+#$WWW::SwaggerClient::Configuration::api_key_prefix->{'apikey'} = "Bearer";
+
+my $api_instance = WWW::SwaggerClient::RegisterApi->new();
+my $resourceID = resourceID_example; # String | The ID for the device / application. This should be unique within the instance of the middleware.
+my $serviceType = serviceType_example; # String | The services to be used by the device / application. One or all of (publish,subscribe,historicData)
+
+eval { 
+    $api_instance->register(resourceID => $resourceID, serviceType => $serviceType);
+};
+if ($@) {
+    warn "Exception when calling RegisterApi->register: $@\n";
+}</code></pre>
+                            </div>
+
+                            <div class="tab-pane" id="examples-Register-register-0-python">
+                              <pre class="prettyprint"><code class="language-python">from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: api_key
+swagger_client.configuration.api_key['apikey'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# swagger_client.configuration.api_key_prefix['apikey'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = swagger_client.RegisterApi()
+resourceID = resourceID_example # String | The ID for the device / application. This should be unique within the instance of the middleware.
+serviceType = serviceType_example # String | The services to be used by the device / application. One or all of (publish,subscribe,historicData)
+
+try: 
+    # Used by Provider to Onboard / Register devices or applications
+    api_instance.register(resourceID, serviceType)
+except ApiException as e:
+    print("Exception when calling RegisterApi->register: %s\n" % e)</code></pre>
+                            </div>
+                          </div>
+
+                          <h2>Parameters</h2>
+
+
+                            <div class="methodsubtabletitle">Header parameters</div>
+                            <table id="methodsubtable">
+                              <tr>
+                                <th width="150px">Name</th>
+                                <th>Description</th>
+                              </tr>
+                                  <tr><td style="width:150px;">resourceID*</td>
+<td>
+
+
+    <div id="d2e199_register_resourceID">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+                    <div class="inner description">
+                        The ID for the device / application. This should be unique within the instance of the middleware.
+                    </div>
+            </div>
+                <div class="inner required">
+                    Required
+                </div>
+        </div>
+    </div>
+</td>
+</tr>
+
+                                  <tr><td style="width:150px;">serviceType*</td>
+<td>
+
+
+    <div id="d2e199_register_serviceType">
+        <div class="json-schema-view">
+            <div class="primitive">
+                <span class="type">
+                    String
+                </span>
+
+                    <div class="inner description">
+                        The services to be used by the device / application. One or all of (publish,subscribe,historicData)
+                    </div>
+            </div>
+                <div class="inner required">
+                    Required
+                </div>
+        </div>
+    </div>
+</td>
+</tr>
+
+                            </table>
+
+
+
+
+                          <h2>Responses</h2>
+                            <h3> Status: 200 - Data received by the middleware </h3>
 
                             <ul class="nav nav-tabs nav-tabs-examples" >
                             </ul>
@@ -3923,7 +4260,7 @@ $(document).ready(function() {
           </div>
           <div id="generator">
             <div class="content">
-              Generated 2017-08-24T05:06:00.010Z
+              Generated 2017-09-15T08:47:06.749Z
             </div>
           </div>
       </div>
