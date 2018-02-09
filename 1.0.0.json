@@ -1,795 +1,1293 @@
 {
-  "swagger": "2.0",
-  "info": {
-    "description": "API Documentation for version 0.1.0. This document is created using Swagger. You can find out more about Swagger at [http://swagger.io](http://swagger.io)",
-    "version": "1.0.0",
-    "title": "Smart City Testbed",
-    "termsOfService": "http://swagger.io/terms/",
-    "contact": {
-      "email": "smartcity.api@rbccps.org"
-    },
-    "license": {
-      "name": "ISC License",
-      "url": "https://opensource.org/licenses/ISC"
-    }
-  },
-  "host": "smartcity.rbccps.org",
-  "basePath": "/api/1.0.0",
-  "tags": [
-    {
-      "name": "1_Management",
-      "description": "Everything about how to Manage Devices and Applications using APIs with the Middleware."
-    },
-    {
-      "name": "2_Device",
-      "description": "Everything about how to PUBLISH sensed data and SUBSCRIBE for commands with the Middleware. (SOUTH Bound)"
-    },
-    {
-      "name": "3_Application",
-      "description": "Everything about how to SUBSCRIBE sensed data and PUBLISH commands with the Middleware. (NORTH Bound)"
-    }
-  ],
-  "schemes": [
-    "https"
-  ],
-  "paths": {
-    "/register": {
-      "post": {
-        "tags": [
-          "1_Management"
-        ],
-        "summary": "Used by User to On-board Devices or Register Applications",
-        "description": "To register devices / applications with the middleware, the Users can use this API with the following parameters. ",
-        "operationId": "1-.register",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "header",
-            "name": "apikey",
-            "type": "string",
-            "description": "The apikey of the User should be provided for validation. ",
-            "required": true
-          },
-          {
-            "in": "header",
-            "name": "resourceID",
-            "type": "string",
-            "description": "The ID for the device / application which need to be onboarded / registered.\nThis should be unique within the instance of the middleware.",
-            "required": true
-          },
-          {
-            "in": "header",
-            "name": "resourceType",
-            "type": "string",
-            "description": "The type of resource. \nCan be one of (Device / Application) which need to be onboarded / registered.",
-            "required": true
-          },
-          {
-            "in": "header",
-            "name": "serviceType",
-            "type": "string",
-            "description": "The services to be used by the resourceType. \nOne or all of (publish,subscribe,historicData)",
-            "required": true
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Registration Success",
-            "schema": {
-              "$ref": "#/definitions/RegistrationResponse"
-            }
-          },
-          "403": {
-            "description": "Unauthorised"
-          }
-        },
-        "security": [
-          {
-            "api_key": []
-          }
-        ]
+   "swagger": "2.0",
+   "info": {
+      "description": "API Documentation for version 1.0.0. This document is created using Swagger. You can find out more about Swagger at [http://swagger.io](http://swagger.io) . For older version of API go to [ http://rbccps-iisc.github.io/0.1.0/ ]( http://rbccps-iisc.github.io/0.1.0/)",
+      "version": "1.0.0",
+      "title": "IDEAM",
+      "termsOfService": "http://swagger.io/terms/",
+      "contact": {
+         "email": "smartcity.api@rbccps.org"
       },
-      "delete": {
-        "tags": [
-          "1_Management"
-        ],
-        "summary": "Used by User to Off-board Devices or De-Register Applications",
-        "description": "To Off-board Devices or De-Register Applications from the middleware, the Users can call this API with the following parameters",
-        "operationId": "2-.deregister",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "header",
-            "name": "apikey",
-            "type": "string",
-            "description": "The apikey of the User should be provided for validation. ",
-            "required": true
-          },
-          {
-            "in": "header",
-            "name": "resourceID",
-            "type": "string",
-            "description": "The ID for the device / application which needs to be removed. ",
-            "required": true
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "De-Registration Success",
-            "schema": {
-              "$ref": "#/definitions/DeRegistrationResponse"
-            }
-          },
-          "403": {
-            "description": "Unauthorised"
-          }
-        },
-        "security": [
-          {
-            "api_key": []
-          }
-        ]
+      "license": {
+         "name": "ISC License",
+         "url": "https://opensource.org/licenses/ISC"
+      }
+   },
+   "host": "smartcity.rbccps.org",
+   "basePath": "/api/1.0.0",
+   "tags": [
+      {
+         "name": "1_Management",
+         "description": "Everything about how to Manage Devices and Applications using APIs with IDEAM."
       },
-      "put": {
-        "tags": [
-          "1_Management"
-        ],
-        "summary": "Used by User to Re-Register (Update service requests) for devices / application.",
-        "description": "To re-register devices from the middleware, the Users can call this API with the following parameters",
-        "operationId": "3-.reregister",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "header",
-            "name": "apikey",
-            "type": "string",
-            "description": "The apikey of the User should be provided for validation. ",
-            "required": true
-          },
-          {
-            "in": "header",
-            "name": "resourceID",
-            "type": "string",
-            "description": "The ID for the device / application which needs to update its Access List. ",
-            "required": true
-          },
-          {
-            "in": "header",
-            "name": "serviceType",
-            "type": "string",
-            "description": "The updated services to be used by the device / application. \nOne or all of (publish,subscribe,historicData)",
-            "required": true
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Re-Registration Success",
-            "schema": {
-              "$ref": "#/definitions/ReRegistrationResponse"
-            }
-          },
-          "403": {
-            "description": "Unauthorised"
-          }
-        },
-        "security": [
-          {
-            "api_key": []
-          }
-        ]
+      {
+         "name": "2_Entity",
+         "description": "Everything about how to PUBLISH and SUBSCRIBE for data with IDEAM."
+      }
+   ],
+   "schemes": [
+      "https"
+   ],
+   "paths": {
+      "/register": {
+         "post": {
+            "tags": [
+               "1_Management"
+            ],
+            "summary": "Used by owner to on-board or Register Entities (Devices or Applications)",
+            "description": "To register devices / applications with IDEAM, the owner can use this API with the following parameters.",
+            "operationId": "1-.register",
+            "consumes": [
+               "application/json"
+            ],
+            "produces": [
+               "application/json"
+            ],
+            "parameters": [
+               {
+                  "in": "header",
+                  "name": "apikey",
+                  "type": "string",
+                  "description": "The apikey of the owner should be provided for validation. ",
+                  "required": true
+               },
+               {
+                  "in": "body",
+                  "name": "body",
+                  "description": "Entity registration data as per the registration schema",
+                  "required": false,
+                  "schema": {
+                     "$ref": "#/definitions/Registration"
+                  }
+               }
+            ],
+            "responses": {
+               "200": {
+                  "description": "Registration Success",
+                  "schema": {
+                     "$ref": "#/definitions/RegistrationResponse"
+                  }
+               },
+               "400": {
+                  "description": "Bad Request"
+               },
+               "403": {
+                  "description": "Forbidden",
+                  "schema": {
+                     "$ref": "#/definitions/Forbidden"
+                  }
+               },
+               "412": {
+                  "description": "Precondition Failed",
+                  "schema": {
+                     "$ref": "#/definitions/PreconditionFailed"
+                  }
+               }
+            },
+            "security": [
+               {
+                  "api_key": []
+               }
+            ]
+         },
+         "delete": {
+            "tags": [
+               "1_Management"
+            ],
+            "summary": "Used by owner to de-register entities (Devices or Applications)",
+            "description": "To de-register entities from IDEAM, the owner can call this API with the following parameters",
+            "operationId": "2-.deregister",
+            "consumes": [
+               "application/json"
+            ],
+            "produces": [
+               "application/json"
+            ],
+            "parameters": [
+               {
+                  "in": "header",
+                  "name": "apikey",
+                  "type": "string",
+                  "description": "The apikey of the owner should be provided for validation. ",
+                  "required": true
+               },
+               {
+                  "in": "body",
+                  "name": "body",
+                  "description": "Entity de-registration data as per the de-registration schema",
+                  "required": true,
+                  "schema": {
+                     "$ref": "#/definitions/DeRegistration"
+                  }
+               }
+            ],
+            "responses": {
+               "200": {
+                  "description": "De-Registration Success",
+                  "schema": {
+                     "$ref": "#/definitions/DeRegistrationResponse"
+                  }
+               },
+               "403": {
+                  "description": "Forbidden",
+                  "schema": {
+                     "$ref": "#/definitions/Forbidden"
+                  }
+               }
+            },
+            "security": [
+               {
+                  "api_key": []
+               }
+            ]
+         },
+         "put": {
+            "tags": [
+               "1_Management"
+            ],
+            "summary": "Used by owner to Re-Register (Update service requests) for entities (Devices or Applications)",
+            "description": "To re-register devices from IDEAM, the owner can call this API with the following parameters",
+            "operationId": "3-.reregister",
+            "consumes": [
+               "application/json"
+            ],
+            "produces": [
+               "application/json"
+            ],
+            "parameters": [
+               {
+                  "in": "header",
+                  "name": "apikey",
+                  "type": "string",
+                  "description": "The apikey of the owner should be provided for validation. ",
+                  "required": true
+               },
+               {
+                  "in": "header",
+                  "name": "entityID",
+                  "type": "string",
+                  "description": "The ID for the entity which needs to be updated.",
+                  "required": true
+               },
+               {
+                  "in": "body",
+                  "name": "body",
+                  "description": "Schema of entity as per the expected JSON schema format.",
+                  "required": false,
+                  "schema": {
+                     "$ref": "#/definitions/Registration"
+                  }
+               }
+            ],
+            "responses": {
+               "200": {
+                  "description": "Re-Registration Success",
+                  "schema": {
+                     "$ref": "#/definitions/RegistrationResponse"
+                  }
+               },
+               "400": {
+                  "description": "Bad Request",
+                  "schema": {
+                     "$ref": "#/definitions/BadRequest"
+                  }
+               },
+               "403": {
+                  "description": "Forbidden",
+                  "schema": {
+                     "$ref": "#/definitions/Forbidden"
+                  }
+               }
+            },
+            "security": [
+               {
+                  "api_key": []
+               }
+            ]
+         },
+         "get": {
+            "tags": [
+               "1_Management"
+            ],
+            "summary": "Used by owner to receive API Key of registered entities (Devices or Applications)",
+            "description": "To get the API key of registered entity from  IDEAM, the owner can call this API with the following parameters",
+            "operationId": "4-.forgotAPIkey",
+            "consumes": [
+               "application/json"
+            ],
+            "produces": [
+               "application/json"
+            ],
+            "parameters": [
+               {
+                  "in": "header",
+                  "name": "apikey",
+                  "type": "string",
+                  "description": "The apikey of the owner should be provided for validation. ",
+                  "required": true
+               },
+               {
+                  "in": "body",
+                  "name": "body",
+                  "description": "Entity ID as per the registration",
+                  "required": false,
+                  "schema": {
+                     "$ref": "#/definitions/forgotapikey"
+                  }
+               }
+            ],
+            "responses": {
+               "200": {
+                  "description": "APIKey Fetch Success",
+                  "schema": {
+                     "$ref": "#/definitions/ForgotAPIKeyResponse"
+                  }
+               },
+               "403": {
+                  "description": "Forbidden",
+                  "schema": {
+                     "$ref": "#/definitions/Forbidden"
+                  }
+               }
+            },
+            "security": [
+               {
+                  "api_key": []
+               }
+            ]
+         }
       },
-      "get": {
-        "tags": [
-          "1_Management"
-        ],
-        "summary": "Used by User to receive API Key of registered device / application.",
-        "description": "To get the API key of registered device / application from the middleware, the Users can call this API with the following parameters",
-        "operationId": "4-.forgotAPIkey",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "header",
-            "name": "apikey",
-            "type": "string",
-            "description": "The apikey of the User should be provided for validation. ",
-            "required": true
-          },
-          {
-            "in": "header",
-            "name": "resourceID",
-            "type": "string",
-            "description": "The ID for the device / application which lost the API Key. ",
-            "required": true
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "APIKey Fetch Success",
-            "schema": {
-              "$ref": "#/definitions/ForgotAPIKeyResponse"
-            }
-          },
-          "403": {
-            "description": "Unauthorised"
-          }
-        },
-        "security": [
-          {
-            "api_key": []
-          }
-        ]
-      }
-    },
-    "/publish": {
-      "post": {
-        "tags": [
-          "2_Device",
-          "3_Application"
-        ],
-        "summary": "Used by Devices / Application to Publish sensed / command information.",
-        "description": "To publish data to the middleware, devices can use the API with the following parameters in the body.",
-        "operationId": "1-.publishData",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "header",
-            "name": "apikey",
-            "type": "string",
-            "description": "The apikey of the Device should be provided for validation. ",
-            "required": true
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Sensor Data as per the data schema",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/Publish-Data"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Data received by the Middleware"
-          },
-          "403": {
-            "description": "Unauthorised"
-          }
-        },
-        "security": [
-          {
-            "api_key": []
-          }
-        ]
-      }
-    },
-    "/subscribe": {
-      "get": {
-        "tags": [
-          "2_Device",
-          "3_Application"
-        ],
-        "summary": "Used by Devices / Application to subscribe for sensed / command information.",
-        "description": "To subscribe for commands from the middleware, use the API with the following parameters",
-        "operationId": "2-.subscribeCommand",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "header",
-            "name": "apikey",
-            "type": "string",
-            "description": "The apikey of the Device should be provided for validation. ",
-            "required": true
-          },
-          {
-            "in": "query",
-            "name": "name",
-            "type": "string",
-            "description": "The queue name of the device. (Typically, it is the same as the ID)"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Connection Established.\nData / Commands / Cofiguration changes / Updates will come in this channel\n.....\n....."
-          },
-          "403": {
-            "description": "Unauthorised"
-          }
-        },
-        "security": [
-          {
-            "api_key": []
-          }
-        ]
+      "/publish": {
+         "post": {
+            "tags": [
+               "2_Entity"
+            ],
+            "summary": "Used by entities to PUBLISH with IDEAM.",
+            "description": "To publish data to IDEAM, entities can use the API with the following parameters in the body.",
+            "operationId": "1-.publishData",
+            "consumes": [
+               "application/json"
+            ],
+            "produces": [
+               "application/json"
+            ],
+            "parameters": [
+               {
+                  "in": "header",
+                  "name": "apikey",
+                  "type": "string",
+                  "description": "The apikey of the entity should be provided for validation. ",
+                  "required": true
+               },
+               {
+                  "in": "body",
+                  "name": "body",
+                  "description": "Data as per the data schema",
+                  "required": true,
+                  "schema": {
+                     "$ref": "#/definitions/Publish-Data"
+                  }
+               }
+            ],
+            "responses": {
+               "200": {
+                  "description": "Success",
+                  "schema": {
+                     "$ref": "#/definitions/Publish200"
+                  }
+               },
+               "400": {
+                  "description": "Bad Request",
+                  "schema": {
+                     "$ref": "#/definitions/Publish400"
+                  }
+               },
+               "403": {
+                  "description": "Forbidden",
+                  "schema": {
+                     "$ref": "#/definitions/Forbidden"
+                  }
+               },
+               "412": {
+                  "description": "Precondition Failed",
+                  "schema": {
+                     "$ref": "#/definitions/Publish412"
+                  }
+               }
+            },
+            "security": [
+               {
+                  "api_key": []
+               }
+            ]
+         }
       },
-      "post": {
-        "tags": [
-          "3_Application"
-        ],
-        "summary": "Used by Application to show interest on sensor data, as per the Catalogue ID",
-        "description": "To follow (express interest) about a published data of a device, use the API with the following parameters in the body.",
-        "operationId": "3-.follow",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "header",
-            "name": "apikey",
-            "type": "string",
-            "description": "The apikey of the Application should be provided for validation. ",
-            "required": true
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "IDs of the device to be followed should be provided here.",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/Bind"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Follow Success.\nYou will start receiving the requested data.\nUse HTTP GET to /subscribe api with your apikey to start receiving data streams."
-          },
-          "403": {
-            "description": "Unauthorised"
-          }
-        },
-        "security": [
-          {
-            "api_key": []
-          }
-        ]
+      "/subscribe": {
+         "get": {
+            "tags": [
+               "2_Entity"
+            ],
+            "summary": "Used by entities to SUBSCRIBE with IDEAM.",
+            "description": "To subscribe for data or commands from IDEAM, use the API with the following parameters",
+            "operationId": "2-.subscribeCommand",
+            "consumes": [
+               "application/json"
+            ],
+            "produces": [
+               "application/json"
+            ],
+            "parameters": [
+               {
+                  "in": "header",
+                  "name": "apikey",
+                  "type": "string",
+                  "description": "The apikey of the entity should be provided for validation. ",
+                  "required": true
+               },
+               {
+                  "in": "header",
+                  "name": "entityID",
+                  "type": "string",
+                  "description": "The queue name of the entity. (Typically, it is the same as the entityID)",
+                  "required": true
+               }
+            ],
+            "responses": {
+               "200": {
+                  "description": "Connection Established.\nData / Commands / Cofiguration changes / Updates will come in this channel\n.....\n....."
+               },
+               "403": {
+                  "description": "Forbidden",
+                  "schema": {
+                     "$ref": "#/definitions/Forbidden"
+                  }
+               }
+            },
+            "security": [
+               {
+                  "api_key": []
+               }
+            ]
+         }
       },
-      "delete": {
-        "tags": [
-          "3_Application"
-        ],
-        "summary": "Used by Application to remove interest on sensor data, as per the Catalogue ID",
-        "description": "To bind to a published data to the queue, use the API with the following parameters in the body.",
-        "operationId": "4-.unbind",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "header",
-            "name": "apikey",
-            "type": "string",
-            "description": "The apikey of the Application should be provided for validation. ",
-            "required": true
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "IDs of the device to be un-followed should be provided here.",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/UnBind"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Un-Follow Success.\nYou will stop receiving the requested data.\nTo receive other followed data, you can use HTTP GET to /subscribe api with your apikey."
-          },
-          "403": {
-            "description": "Unauthorised"
-          }
-        },
-        "security": [
-          {
-            "api_key": []
-          }
-        ]
-      }
-    },
-    "/historicData": {
-      "get": {
-        "tags": [
-          "3_Application"
-        ],
-        "summary": "Used by Application to get historic data of a device from the database.",
-        "operationId": "1-.gethistoricData",
-        "description": "To GET  historic data of a device from the database, use the API with query parameters",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "header",
-            "name": "apikey",
-            "type": "string",
-            "description": "The apikey of the Application should be provided for validation. ",
-            "required": true
-          },
-          {
-            "in": "query",
-            "name": "pretty=<boolean>&sort=<timestampOrder>&size=<responsesize>",
-            "type": "string",
-            "description": "JSON type and ItemValue should be as per the Catalogue document."
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "IDs of the device to be un-followed should be provided here.",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/ElasticSearch"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Requested cat data"
-          },
-          "403": {
-            "description": "Unauthorised"
-          }
-        },
-        "security": [
-          {
-            "api_key": []
-          }
-        ]
-      }
-    },
-    "/cat": {
-      "get": {
-        "tags": [
-          "3_Application"
-        ],
-        "summary": "Used by Application to find the available sensors in the City",
-        "operationId": "1-.get",
-        "description": "To view the Resource Catalogue, use the API without any API Key to view Public Data",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "query",
-            "name": "key=<ItemID>&value=<ItemValue>",
-            "type": "string",
-            "description": "ItemID and ItemValue should be as per the Catalogue document."
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Requested cat data"
-          }
-        }
+      "/db": {
+         "get": {
+            "tags": [
+               "2_Entity"
+            ],
+            "summary": "Used by entities to access IDEAM entity-data database.",
+            "operationId": "1-.db",
+            "description": "To GET  archived data of an entity from the database, use the API with query parameters",
+            "consumes": [
+               "application/json"
+            ],
+            "produces": [
+               "application/json"
+            ],
+            "parameters": [
+               {
+                  "in": "header",
+                  "name": "apikey",
+                  "type": "string",
+                  "description": "The apikey of the entity should be provided for validation. ",
+                  "required": true
+               },
+               {
+                  "in": "query",
+                  "name": "pretty=<boolean>&sort=<timestampOrder>&size=<responsesize>",
+                  "type": "string",
+                  "description": "JSON type and ItemValue should be as per the Catalogue document."
+               },
+               {
+                  "in": "body",
+                  "name": "body",
+                  "description": "IDs of the device to be un-followed should be provided here.",
+                  "required": true,
+                  "schema": {
+                     "$ref": "#/definitions/ElasticSearch"
+                  }
+               }
+            ],
+            "responses": {
+               "200": {
+                  "description": "Requested cat data"
+               },
+               "403": {
+                  "description": "Forbidden",
+                  "schema": {
+                     "$ref": "#/definitions/Forbidden"
+                  }
+               }
+            },
+            "security": [
+               {
+                  "api_key": []
+               }
+            ]
+         }
       },
-      "post": {
-        "tags": [
-          "1_Management"
-        ],
-        "summary": "Used by User to create a new Catalog Entry (Sensor Information) in the Middleware",
-        "operationId": "2-.post",
-        "description": "To POST data to the middleware, use the API with the following parameters in the body.",
-        "consumes": [
-          "application/json"
-        ],
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "in": "header",
-            "name": "apikey",
-            "type": "string",
-            "description": "The apikey of the User should be provided for validation. ",
-            "required": true
-          },
-          {
-            "in": "body",
-            "name": "body",
-            "description": "Sensor Data object that needs to be added",
-            "required": true,
-            "schema": {
-              "$ref": "#/definitions/DataSchema"
+      "/video": {
+         "get": {
+            "tags": [
+               "2_Entity"
+            ],
+            "summary": "Used by entities to stream video (HLS) from IDEAM.",
+            "description": "To  stream video (HLS) from IDEAM, use the API with the following parameters",
+            "operationId": "1-.subscribeVideo",
+            "consumes": [
+               "application/json"
+            ],
+            "produces": [
+               "application/json"
+            ],
+            "parameters": [
+               {
+                  "in": "header",
+                  "name": "apikey",
+                  "type": "string",
+                  "description": "The apikey of the entity should be provided for validation. ",
+                  "required": true
+               },
+               {
+                  "in": "header",
+                  "name": "cameraID",
+                  "type": "string",
+                  "description": "{videocameraID}.{playback_format}",
+                  "required": true
+               }
+            ],
+            "responses": {
+               "200": {
+                  "description": "Success  Video Stream Plays…"
+               },
+               "403": {
+                  "description": "Forbidden",
+                  "schema": {
+                     "$ref": "#/definitions/Forbidden"
+                  }
+               }
+            },
+            "security": [
+               {
+                  "api_key": []
+               }
+            ]
+         }
+      },
+      "/cat": {
+         "get": {
+            "tags": [
+               "2_Entity"
+            ],
+            "summary": "Used by entities to find the available resources in IDEAM",
+            "operationId": "2-.cat",
+            "description": "To view the Resource Catalogue, use the API without any API Key to view Public Data",
+            "consumes": [
+               "application/json"
+            ],
+            "produces": [
+               "application/json"
+            ],
+            "parameters": [
+               {
+                  "in": "query",
+                  "name": "key=<ItemID>&value=<ItemValue>",
+                  "type": "string",
+                  "description": "ItemID and ItemValue should be as per the Catalogue document."
+               }
+            ],
+            "responses": {
+               "200": {
+                  "description": "Requested cat data"
+               }
             }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Data received by the Middleware"
-          },
-          "403": {
-            "description": "Unauthorised"
-          }
-        },
-        "security": [
-          {
-            "api_key": []
-          }
-        ]
+         }
+      },
+      "/follow": {
+         "post": {
+            "tags": [
+               "2_Entity"
+            ],
+            "summary": "Used by entities to follow (express interest) about another entity (published data).",
+            "description": "To follow (express interest) about published data, use the API with the following parameters in the body.",
+            "operationId": "2-.nfollow",
+            "consumes": [
+               "application/json"
+            ],
+            "produces": [
+               "application/json"
+            ],
+            "parameters": [
+               {
+                  "in": "header",
+                  "name": "apikey",
+                  "type": "string",
+                  "description": "The apikey of the owner should be provided for validation. ",
+                  "required": true
+               },
+               {
+                  "in": "body",
+                  "name": "body",
+                  "description": "IDs of the entities to be followed should be provided here.",
+                  "required": false,
+                  "schema": {
+                     "$ref": "#/definitions/EntityID"
+                  }
+               }
+            ],
+            "responses": {
+               "200": {
+                  "description": "Follow Requested. You will start receiving the requested data once approved. Use HTTP GET to /follow API with your apikey to know the status of follow request."
+               },
+               "403": {
+                  "description": "Forbidden",
+                  "schema": {
+                     "$ref": "#/definitions/Forbidden"
+                  }
+               }
+            },
+            "security": [
+               {
+                  "api_key": []
+               }
+            ]
+         },
+         "delete": {
+            "tags": [
+               "2_Entity"
+            ],
+            "summary": "Used by Application to remove interest on an entity, as per the Catalogue ID.",
+            "description": "To un-follow (remove interest) about a published data of a device, use the API with the following parameters in the body.",
+            "operationId": "2-.unfollow",
+            "consumes": [
+               "application/json"
+            ],
+            "produces": [
+               "application/json"
+            ],
+            "parameters": [
+               {
+                  "in": "header",
+                  "name": "apikey",
+                  "type": "string",
+                  "description": "The apikey of the owner should be provided for validation. ",
+                  "required": true
+               },
+               {
+                  "in": "body",
+                  "name": "body",
+                  "description": "IDs of the entities to be un-followed should be provided here.",
+                  "required": true,
+                  "schema": {
+                     "$ref": "#/definitions/DeRegistration"
+                  }
+               }
+            ],
+            "responses": {
+               "200": {
+                  "description": "Un-Follow Success. You will stop receiving the requested data. To receive other followed data, you can use HTTP GET to /subscribe api with your apikey.",
+                  "schema": {
+                     "$ref": "#/definitions/DeRegistrationResponse"
+                  }
+               },
+               "403": {
+                  "description": "Forbidden",
+                  "schema": {
+                     "$ref": "#/definitions/Forbidden"
+                  }
+               }
+            },
+            "security": [
+               {
+                  "api_key": []
+               }
+            ]
+         },
+         "get": {
+            "tags": [
+               "2_Entity"
+            ],
+            "summary": "To know the status of a follow request, use the API with the following parameters in the body.",
+            "description": "To know the status of a follow request, use the API with the following parameters in the body.",
+            "operationId": "3-.follow",
+            "consumes": [
+               "application/json"
+            ],
+            "produces": [
+               "application/json"
+            ],
+            "parameters": [
+               {
+                  "in": "header",
+                  "name": "apikey",
+                  "type": "string",
+                  "description": "The apikey of the owner should be provided for validation. ",
+                  "required": true
+               }
+            ],
+            "responses": {
+               "200": {
+                  "description": "Followed Devices",
+                  "schema": {
+                     "$ref": "#/definitions/RegistrationResponse"
+                  }
+               },
+               "403": {
+                  "description": "Forbidden",
+                  "schema": {
+                     "$ref": "#/definitions/Forbidden"
+                  }
+               }
+            },
+            "security": [
+               {
+                  "api_key": []
+               }
+            ]
+         }
+      },
+      "/share": {
+         "post": {
+            "tags": [
+               "2_Entity"
+            ],
+            "summary": "Used by owners to allow followers (who expressed interest) to access its data.",
+            "description": "To follow (express interest) about a published data of an entity, use the API with the following parameters in the body.",
+            "operationId": "1-.share",
+            "consumes": [
+               "application/json"
+            ],
+            "produces": [
+               "application/json"
+            ],
+            "parameters": [
+               {
+                  "in": "header",
+                  "name": "apikey",
+                  "type": "string",
+                  "description": "The apikey of the entity should be provided for validation. ",
+                  "required": true
+               },
+               {
+                  "in": "body",
+                  "name": "body",
+                  "description": "IDs of the device to be followed should be provided here.",
+                  "required": true,
+                  "schema": {
+                     "$ref": "#/definitions/share"
+                  }
+               }
+            ],
+            "responses": {
+               "200": {
+                  "description": "Follow Request approved. Your data will now be shared with the followers."
+               },
+               "403": {
+                  "description": "Forbidden",
+                  "schema": {
+                     "$ref": "#/definitions/Forbidden"
+                  }
+               }
+            },
+            "security": [
+               {
+                  "api_key": []
+               }
+            ]
+         },
+         "get": {
+            "tags": [
+               "2_Entity"
+            ],
+            "summary": "Used by owner to receive share requests",
+            "description": "To subscribe for share requests for your data from IDEAM, use the API with the following parameters",
+            "operationId": "2-.share",
+            "consumes": [
+               "application/json"
+            ],
+            "produces": [
+               "application/json"
+            ],
+            "parameters": [
+               {
+                  "in": "header",
+                  "name": "apikey",
+                  "type": "string",
+                  "description": "The apikey of the entity should be provided for validation. ",
+                  "required": true
+               }
+            ],
+            "responses": {
+               "200": {
+                  "description": "Connection Established.\nShare request obtained from following devices\n.....\n....."
+               },
+               "403": {
+                  "description": "Forbidden",
+                  "schema": {
+                     "$ref": "#/definitions/Forbidden"
+                  }
+               }
+            },
+            "security": [
+               {
+                  "api_key": []
+               }
+            ]
+         },
+         "delete": {
+            "tags": [
+               "2_Entity"
+            ],
+            "summary": "Used by owner to remove share access of an entity or follower.",
+            "description": "To remove share access of your data for a follower, use the API with the following parameters in the body.",
+            "operationId": "3-.share",
+            "consumes": [
+               "application/json"
+            ],
+            "produces": [
+               "application/json"
+            ],
+            "parameters": [
+               {
+                  "in": "header",
+                  "name": "apikey",
+                  "type": "string",
+                  "description": "The apikey of the Application should be provided for validation. ",
+                  "required": true
+               },
+               {
+                  "in": "body",
+                  "name": "body",
+                  "description": "IDs of the device to be followed should be provided here.",
+                  "required": true,
+                  "schema": {
+                     "$ref": "#/definitions/share"
+                  }
+               }
+            ],
+            "responses": {
+               "200": {
+                  "description": "Un-Share Success. Your data will now not be shared with the followers mentioned. Use HTTP GET to /share API with your apikey to know the latest follow request details."
+               },
+               "403": {
+                  "description": "Forbidden",
+                  "schema": {
+                     "$ref": "#/definitions/Forbidden"
+                  }
+               }
+            },
+            "security": [
+               {
+                  "api_key": []
+               }
+            ]
+         }
       }
-    }
-  },
-  "securityDefinitions": {
-    "api_key": {
-      "type": "apiKey",
-      "name": "apikey",
-      "in": "header"
-    }
-  },
-  "definitions": {
-    "Publish-Data": {
-      "type": "object",
-      "required": [
-        "resourceID",
-        "data"
-      ],
-      "properties": {
-        "resourceID": {
-          "type": "string",
-          "example": "DeviceID"
-        },
-        "data": {
-          "type": "string",
-          "example": "Sensed data of {DeviceID} as per the Device Data Schema"
-        }
+   },
+   "securityDefinitions": {
+      "api_key": {
+         "type": "apiKey",
+         "name": "apikey",
+         "in": "header"
       }
-    },
-    "Bind": {
-      "type": "object",
-      "required": [
-        "queue",
-        "resourceID"
-      ],
-      "properties": {
-        "resourceID": {
-          "type": "string",
-          "example": [
-            "EM_D0025860",
-            "70b3d58ff0031de5"
-          ]
-        },
-        "queue": {
-          "type": "string",
-          "example": "The {ApplicationID} as per registration"
-        }
+   },
+   "definitions": {
+      "Registration": {
+         "type": "object",
+         "required": [
+            "serverConfiguration",
+            "entitySchema"
+         ],
+         "properties": {
+            "serverConfiguration": {
+               "type": "object",
+               "required": [
+                  "credentials",
+                  "configuration"
+               ],
+               "properties": {
+                  "credentials": {
+                     "type": "object",
+                     "required": [
+                        "serverURL",
+                        "serverMethod",
+                        "username",
+                        "password",
+                        "apiKeyURL"
+                     ],
+                     "properties": {
+                        "serverURL": {
+                           "type": "string"
+                        },
+                        "serverMethod": {
+                           "type": "string"
+                        },
+                        "username": {
+                           "type": "string"
+                        },
+                        "password": {
+                           "type": "string"
+                        },
+                        "apiKeyURL": {
+                           "type": "string"
+                        }
+                     }
+                  },
+                  "configuration": {
+                     "type": "object",
+                     "required": [
+                        "adrInterval",
+                        "appEUI",
+                        "appKey",
+                        "applicationID",
+                        "description",
+                        "devEUI",
+                        "installationMargin",
+                        "isABP",
+                        "isClassC",
+                        "name",
+                        "relaxFCnt",
+                        "rx1DROffset",
+                        "rx2DR",
+                        "rxDelay",
+                        "rxWindow",
+                        "useApplicationSettings"
+                     ],
+                     "properties": {
+                        "adrInterval": {
+                           "type": "string"
+                        },
+                        "appEUI": {
+                           "type": "string"
+                        },
+                        "appKey": {
+                           "type": "string"
+                        },
+                        "applicationID": {
+                           "type": "string"
+                        },
+                        "description": {
+                           "type": "string"
+                        },
+                        "devEUI": {
+                           "type": "string"
+                        },
+                        "installationMargin": {
+                           "type": "string"
+                        },
+                        "isABP": {
+                           "type": "string"
+                        },
+                        "isClassC": {
+                           "type": "string"
+                        },
+                        "name": {
+                           "type": "string"
+                        },
+                        "relaxFCnt": {
+                           "type": "string"
+                        },
+                        "rx1DROffset": {
+                           "type": "string"
+                        },
+                        "rx2DR": {
+                           "type": "string"
+                        },
+                        "rxDelay": {
+                           "type": "string"
+                        },
+                        "rxWindow": {
+                           "type": "string"
+                        },
+                        "useApplicationSettings": {
+                           "type": "string"
+                        }
+                     }
+                  }
+               },
+               "example": "JSON document as per the reference registration schema."
+            },
+            "entitySchema": {
+               "type": "object",
+               "example": "JSON document as per the reference data schema."
+            }
+         }
+      },
+      "DeRegistration": {
+         "type": "object",
+         "required": [
+            "entityID"
+         ],
+         "properties": {
+            "entityID": {
+               "type": "string",
+               "example": "ID of the entity to be de-registered."
+            }
+         }
+      },
+      "forgotapikey": {
+         "type": "object",
+         "required": [
+            "entityID"
+         ],
+         "properties": {
+            "entityID": {
+               "type": "string",
+               "example": "ID of the entity."
+            }
+         }
+      },
+      "Publish-Data": {
+         "type": "object",
+         "required": [
+            "body"
+         ],
+         "properties": {
+            "body": {
+               "type": "string",
+               "example": "JSON Data of as per the entity data or control Schema"
+            }
+         }
+      },
+      "share": {
+         "type": "object",
+         "required": [
+            "entityID"
+         ],
+         "properties": {
+            "entityID": {
+               "type": "string",
+               "example": [
+                  "EM_D0025860",
+                  "70b3d58ff0031de5"
+               ]
+            }
+         }
+      },
+      "Bind": {
+         "type": "object",
+         "required": [
+            "queue",
+            "exchange",
+            "keys"
+         ],
+         "properties": {
+            "exchange": {
+               "type": "string",
+               "example": "amq.topic"
+            },
+            "keys": {
+               "type": "string",
+               "example": [
+                  "EM_D0025860",
+                  "70b3d58ff0031de5"
+               ]
+            },
+            "queue": {
+               "type": "string",
+               "example": "The {ApplicationID} as per registration"
+            }
+         }
+      },
+      "UnBind": {
+         "type": "object",
+         "required": [
+            "queue",
+            "exchange",
+            "keys"
+         ],
+         "properties": {
+            "exchange": {
+               "type": "string",
+               "example": "amq.topic"
+            },
+            "keys": {
+               "type": "string",
+               "example": [
+                  "EM_D0025860"
+               ]
+            },
+            "queue": {
+               "type": "string",
+               "example": "The {ApplicationID} as per registration"
+            }
+         }
+      },
+      "DataSchema": {
+         "type": "object",
+         "required": [
+            "catalogueID",
+            "dataSchema"
+         ],
+         "properties": {
+            "catalogueID": {
+               "type": "string",
+               "example": "Deviceid"
+            },
+            "dataSchema": {
+               "type": "string",
+               "example": "Data Schema of Deviceid"
+            }
+         }
+      },
+      "RegistrationResponse": {
+         "type": "object",
+         "required": [
+            "APIKey",
+            "Subscription Queue Name",
+            "ResourceID",
+            "accessEndPoint",
+            "Registration",
+            "publicationEndPoint",
+            "resourceAPIInfo",
+            "AllowedAPIs",
+            "subscriptionEndPoint"
+         ],
+         "properties": {
+            "APIKey": {
+               "type": "string",
+               "example": "d9f399210b9245cbbef979b8078dd3da"
+            },
+            "Subscription Queue Name": {
+               "type": "string",
+               "example": "testDemo"
+            },
+            "ResourceID": {
+               "type": "string",
+               "example": "testDemo"
+            },
+            "accessEndPoint": {
+               "type": "string",
+               "example": "https://smartcity.rbccps.org/api/0.1.0/historicData"
+            },
+            "Registration": {
+               "type": "string",
+               "example": "success"
+            },
+            "publicationEndPoint": {
+               "type": "string",
+               "example": "https://smartcity.rbccps.org/api/0.1.0/publish"
+            },
+            "resourceAPIInfo": {
+               "type": "string",
+               "example": "https://rbccps-iisc.github.io"
+            },
+            "AllowedAPIs": {
+               "type": "string",
+               "example": "publish,subscribe,cat"
+            },
+            "subscriptionEndPoint": {
+               "type": "string",
+               "example": "https://smartcity.rbccps.org/api/0.1.0/subscribe"
+            }
+         }
+      },
+      "DeRegistrationResponse": {
+         "type": "object",
+         "required": [
+            "entityID",
+            "De-Registration"
+         ],
+         "properties": {
+            "entityID": {
+               "type": "string",
+               "example": "testDemo"
+            },
+            "De-Registration": {
+               "type": "string",
+               "example": "success"
+            }
+         }
+      },
+      "ReRegistrationResponse": {
+         "type": "object",
+         "required": [
+            "APIKey",
+            "Subscription Queue Name",
+            "ResourceID",
+            "accessEndPoint",
+            "Re-Registration",
+            "publicationEndPoint",
+            "resourceAPIInfo",
+            "AllowedAPIs",
+            "subscriptionEndPoint"
+         ],
+         "properties": {
+            "APIKey": {
+               "type": "string",
+               "example": "d9f399210b9245cbbef979b8078dd3da"
+            },
+            "Subscription Queue Name": {
+               "type": "string",
+               "example": "testDemo"
+            },
+            "ResourceID": {
+               "type": "string",
+               "example": "testDemo"
+            },
+            "accessEndPoint": {
+               "type": "string",
+               "example": "https://smartcity.rbccps.org/api/0.1.0/historicData"
+            },
+            "Re-Registration": {
+               "type": "string",
+               "example": "success"
+            },
+            "publicationEndPoint": {
+               "type": "string",
+               "example": "https://smartcity.rbccps.org/api/0.1.0/publish"
+            },
+            "resourceAPIInfo": {
+               "type": "string",
+               "example": "https://rbccps-iisc.github.io"
+            },
+            "AllowedAPIs": {
+               "type": "string",
+               "example": "publish,subscribe,cat"
+            },
+            "subscriptionEndPoint": {
+               "type": "string",
+               "example": "https://smartcity.rbccps.org/api/0.1.0/subscribe"
+            }
+         }
+      },
+      "ForgotAPIKeyResponse": {
+         "type": "object",
+         "required": [
+            "APIKey",
+            "ResourceID"
+         ],
+         "properties": {
+            "APIKey": {
+               "type": "string",
+               "example": "d9f399210b9245cbbef979b8078dd3da"
+            },
+            "ResourceID": {
+               "type": "string",
+               "example": "testDemo"
+            }
+         }
+      },
+      "ElasticSearch": {
+         "type": "object",
+         "required": [
+            "APIKey",
+            "ResourceID"
+         ],
+         "properties": {
+            "APIKey": {
+               "type": "string",
+               "example": "d9f399210b9245cbbef979b8078dd3da"
+            },
+            "ResourceID": {
+               "type": "string",
+               "example": "testDemo"
+            },
+            "Query": {
+               "type": "string",
+               "example": "Query As per Elastic Search Documentation"
+            }
+         }
+      },
+      "Forbidden": {
+         "required": [
+            "message"
+         ],
+         "properties": {
+            "message": {
+               "type": "string",
+               "example": "Invalid authentication credentials"
+            }
+         }
+      },
+      "BadRequest": {
+         "required": [
+            "Registration",
+            "Reason"
+         ],
+         "properties": {
+            "Registration": {
+               "type": "string",
+               "example": "failure"
+            },
+            "Reason": {
+               "type": "string",
+               "example": "Schema is not a valid JSON."
+            }
+         }
+      },
+      "PreconditionFailed": {
+         "required": [
+            "Registration",
+            "Reason"
+         ],
+         "properties": {
+            "Registration": {
+               "type": "string",
+               "example": "failure"
+            },
+            "Reason": {
+               "type": "string",
+               "example": "The ID is already used. Please Use a Unique ID for Registration."
+            }
+         }
+      },
+      "Publish200": {
+         "required": [
+            "ResponseInfo"
+         ],
+         "properties": {
+            "ResponseInfo": {
+               "type": "string",
+               "example": "Successfully received data"
+            }
+         }
+      },
+      "Publish400": {
+         "required": [
+            "ResponseInfo",
+            "Reason"
+         ],
+         "properties": {
+            "ResponseInfo": {
+               "type": "string",
+               "example": "failure"
+            },
+            "Reason": {
+               "type": "string",
+               "example": "No data schema registered. Update the entity with data schema to publish."
+            }
+         }
+      },
+      "Publish412": {
+         "required": [
+            "ResponseInfo",
+            "Reason"
+         ],
+         "properties": {
+            "ResponseInfo": {
+               "type": "string",
+               "example": "failure"
+            },
+            "Reason": {
+               "type": "string",
+               "example": "JSON not matching with the registered schema."
+            }
+         }
+      },
+      "EntityID": {
+         "required": [
+            "entityID"
+         ],
+         "properties": {
+            "entityID": {
+               "type": "array",
+               "items": {
+                  "type": "string",
+                  "example": "70b3d58ff0031de5"
+               }
+            }
+         }
       }
-    },
-    "UnBind": {
-      "type": "object",
-      "required": [
-        "queue",
-        "resourceID"
-      ],
-      "properties": {
-        "resourceID": {
-          "type": "string",
-          "example": [
-            "EM_D0025860"
-          ]
-        },
-        "queue": {
-          "type": "string",
-          "example": "The {ApplicationID} as per registration"
-        }
-      }
-    },
-    "DataSchema": {
-      "type": "object",
-      "required": [
-        "catalogueID",
-        "dataSchema"
-      ],
-      "properties": {
-        "catalogueID": {
-          "type": "string",
-          "example": "Deviceid"
-        },
-        "dataSchema": {
-          "type": "string",
-          "example": "Data Schema of Deviceid"
-        }
-      }
-    },
-    "RegistrationResponse": {
-      "type": "object",
-      "required": [
-        "APIKey",
-        "Subscription Queue Name",
-        "ResourceID",
-        "accessEndPoint",
-        "Registration",
-        "publicationEndPoint",
-        "resourceAPIInfo",
-        "AllowedAPIs",
-        "subscriptionEndPoint"
-      ],
-      "properties": {
-        "APIKey": {
-          "type": "string",
-          "example": "d9f399210b9245cbbef979b8078dd3da"
-        },
-        "Subscription Queue Name": {
-          "type": "string",
-          "example": "testDemo"
-        },
-        "ResourceID": {
-          "type": "string",
-          "example": "testDemo"
-        },
-        "accessEndPoint": {
-          "type": "string",
-          "example": "https://smartcity.rbccps.org/api/0.1.0/historicData"
-        },
-        "Registration": {
-          "type": "string",
-          "example": "success"
-        },
-        "publicationEndPoint": {
-          "type": "string",
-          "example": "https://smartcity.rbccps.org/api/0.1.0/publish"
-        },
-        "resourceAPIInfo": {
-          "type": "string",
-          "example": "https://rbccps-iisc.github.io"
-        },
-        "AllowedAPIs": {
-          "type": "string",
-          "example": "publish,subscribe,cat"
-        },
-        "subscriptionEndPoint": {
-          "type": "string",
-          "example": "https://smartcity.rbccps.org/api/0.1.0/subscribe"
-        }
-      }
-    },
-    "DeRegistrationResponse": {
-      "type": "object",
-      "required": [
-        "ResourceID",
-        "DeRegistration"
-      ],
-      "properties": {
-        "ResourceID": {
-          "type": "string",
-          "example": "testDemo"
-        },
-        "DeRegistration": {
-          "type": "string",
-          "example": "success"
-        }
-      }
-    },
-    "ReRegistrationResponse": {
-      "type": "object",
-      "required": [
-        "APIKey",
-        "Subscription Queue Name",
-        "ResourceID",
-        "accessEndPoint",
-        "Re-Registration",
-        "publicationEndPoint",
-        "resourceAPIInfo",
-        "AllowedAPIs",
-        "subscriptionEndPoint"
-      ],
-      "properties": {
-        "APIKey": {
-          "type": "string",
-          "example": "d9f399210b9245cbbef979b8078dd3da"
-        },
-        "Subscription Queue Name": {
-          "type": "string",
-          "example": "testDemo"
-        },
-        "ResourceID": {
-          "type": "string",
-          "example": "testDemo"
-        },
-        "accessEndPoint": {
-          "type": "string",
-          "example": "https://smartcity.rbccps.org/api/0.1.0/historicData"
-        },
-        "Re-Registration": {
-          "type": "string",
-          "example": "success"
-        },
-        "publicationEndPoint": {
-          "type": "string",
-          "example": "https://smartcity.rbccps.org/api/0.1.0/publish"
-        },
-        "resourceAPIInfo": {
-          "type": "string",
-          "example": "https://rbccps-iisc.github.io"
-        },
-        "AllowedAPIs": {
-          "type": "string",
-          "example": "publish,subscribe,cat"
-        },
-        "subscriptionEndPoint": {
-          "type": "string",
-          "example": "https://smartcity.rbccps.org/api/0.1.0/subscribe"
-        }
-      }
-    },
-    "ForgotAPIKeyResponse": {
-      "type": "object",
-      "required": [
-        "APIKey",
-        "ResourceID"
-      ],
-      "properties": {
-        "APIKey": {
-          "type": "string",
-          "example": "d9f399210b9245cbbef979b8078dd3da"
-        },
-        "ResourceID": {
-          "type": "string",
-          "example": "testDemo"
-        }
-      }
-    },
-    "ElasticSearch": {
-      "type": "object",
-      "required": [
-        "APIKey",
-        "ResourceID"
-      ],
-      "properties": {
-        "APIKey": {
-          "type": "string",
-          "example": "d9f399210b9245cbbef979b8078dd3da"
-        },
-        "ResourceID": {
-          "type": "string",
-          "example": "testDemo"
-        },
-        "Query": {
-          "type": "string",
-          "example": "Query As per Elastic Search Documentation"
-        }
-      }
-    }
-  }
+   }
 }
